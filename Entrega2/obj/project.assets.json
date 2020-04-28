@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manuel\\Dropbox\\UANDES\\S07\\POO\\ProyectoSemestral\\Entrega 2\\Entrega2\\Entrega2\\Entrega2.csproj",
+      "projectUniqueName": "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj",
       "projectName": "Entrega2",
-      "projectPath": "C:\\Users\\Manuel\\Dropbox\\UANDES\\S07\\POO\\ProyectoSemestral\\Entrega 2\\Entrega2\\Entrega2\\Entrega2.csproj",
+      "projectPath": "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj",
       "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manuel\\Dropbox\\UANDES\\S07\\POO\\ProyectoSemestral\\Entrega 2\\Entrega2\\Entrega2\\obj\\",
+      "outputPath": "C:\\Users\\Manuel\\Netify\\Entrega2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
