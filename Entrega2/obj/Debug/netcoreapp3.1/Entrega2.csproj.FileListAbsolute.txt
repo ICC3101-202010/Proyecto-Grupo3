@@ -1,0 +1,13 @@
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.exe
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.deps.json
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.runtimeconfig.json
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.runtimeconfig.dev.json
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.dll
+C:\Users\Manuel\Netify\Entrega2\bin\Debug\netcoreapp3.1\Entrega2.pdb
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.csprojAssemblyReference.cache
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.csproj.CoreCompileInputs.cache
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.AssemblyInfoInputs.cache
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.AssemblyInfo.cs
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.dll
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.pdb
+C:\Users\Manuel\Netify\Entrega2\obj\Debug\netcoreapp3.1\Entrega2.genruntimeconfig.cache
