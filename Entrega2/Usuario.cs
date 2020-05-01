@@ -13,6 +13,7 @@ namespace Entrega2
         public string claveUsuario; public string mail; public string descripcion; public bool privado;
         public bool premium;
 
+
         //Playlists de cualquier usuario.
 
         List<Playlist> Playlists;
@@ -26,7 +27,25 @@ namespace Entrega2
         List<Cancion> ColaCanciones;
         List<Video> ColaVideos;
 
-        //Metodo para cambiar alguno de los parametros base. 
+        //Metodo para mostrar info. de un usuario. 
+
+        public void userData()
+        {
+            Console.WriteLine("Datos de Usuario: \n");
+            Console.WriteLine("1. Nombre: "); Console.WriteLine(this.nombre);
+            Console.WriteLine("2. Apellido: "); Console.WriteLine(this.apellido);
+            Console.WriteLine("3. Clave: "); Console.WriteLine(this.claveUsuario);
+            Console.WriteLine("4. Mail: "); Console.WriteLine(this.mail);
+            Console.WriteLine("5. Descripcion: "); Console.WriteLine(this.descripcion);
+            Console.WriteLine("6. Privado: "); Console.WriteLine(this.privado);
+            Console.WriteLine("7. Premium: "); Console.WriteLine(this.premium);
+        }
+
+
+
+        //Metodo para cambiar alguno de los parametros base.
+
+
         public void cambiarDato(string tipoDato, string nuevoDato)
         {
     
@@ -42,7 +61,6 @@ namespace Entrega2
                 Console.WriteLine("6. Privado: "); Console.WriteLine(this.privado);
                 Console.WriteLine("7. Premium: "); Console.WriteLine(this.premium);
                 }
-
 
             //Voy viendo por casos. 
 
@@ -89,8 +107,7 @@ namespace Entrega2
                         changeData = false;
                         break;
                 }
-            }
-            
+            }            
         }
     }
 }

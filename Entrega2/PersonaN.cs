@@ -20,6 +20,7 @@ namespace Entrega2
             List<PlaylistCancion> CancionesPrivadas = new List<PlaylistCancion>();
             List<PlaylistVideo> VideosPublicos = new List<PlaylistVideo>();
             List<PlaylistVideo> VideosPrivados = new List<PlaylistVideo>();
+
         }
     }
 }

@@ -28,6 +28,9 @@ namespace Entrega2
 
             Peliculas = new List<Video>(); Premios = new List<string>();
 
+
+
+
         }
 
 
