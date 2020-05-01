@@ -29,7 +29,7 @@ namespace Entrega2
             {
                 GestorReprod.Usuarios[i].userData();
                 Console.WriteLine("\n");
-                Thread.Sleep(1000;
+                
             }
         }
     }
