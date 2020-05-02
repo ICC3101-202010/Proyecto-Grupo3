@@ -20,17 +20,131 @@ namespace Entrega2
             //Los agrego al gestor. 
             GestorReprod.Usuarios.Add(Usuario1); GestorReprod.Usuarios.Add(Usuario2);
 
-            //Pruebo func. para crear usuario. 
-            GestorReprod.NuevoUsuario();
+            //MENU PROGRAMA GENERAL.
 
-            //Imprimo datos de todos los usuarios en sistema. 
+            bool runningProgram = true;
 
-            for (int i = 0; i < GestorReprod.Usuarios.Count(); i++)
+            while (runningProgram)
             {
-                GestorReprod.Usuarios[i].userData();
-                Console.WriteLine("\n");
-                
+                Console.WriteLine("Bienvenido a Netify.");
+                Console.WriteLine("1. Login");
+                Console.WriteLine("2. Registrarse.");
+                Console.WriteLine("3. Modo Admin.");
+                Console.WriteLine("4. Salir.");
+
+                int mainChoice = Convert.ToInt32(Console.ReadLine());
+
+                switch (mainChoice)
+                {
+                    case 1:
+
+                        Console.Clear();
+
+                        //Login funciona asi: Usuario ingresa mail y gestor busca mails de todos los usuarios hasta encontrar
+                        //el mail que corresponde. Luego pide contraseña y deja a usuario acceder si contraseña ingresada 
+                        //es igual a la guardada para aquel mail.
+
+                        //Primero pido mail usuario.
+
+                        bool checkingMail = true; bool validMail = false;
+
+                        //Pido los mails, cuando el que ingreso calza con alguno en la base de datos del gestor
+                        //guardo la contraseña de aquel usuario para ver que calce con la que ingreso.
+
+                        int loginID = 0;
+
+                        while (checkingMail)
+                        {
+                            Console.WriteLine("Ingrese mail: ");
+                            string candidateMail = Console.ReadLine();
+
+                            for (int i = 0; i < GestorReprod.Usuarios.Count(); i++)
+                            {
+                                if (GestorReprod.Usuarios[i].mail == candidateMail)
+                                {
+                                    Console.WriteLine("Mail Valido."); Console.Clear();
+                                    string loginPassword = GestorReprod.Usuarios[i].claveUsuario;
+                                    loginID = GestorReprod.Usuarios[i].idUsuario;
+                                    validMail = true;  checkingMail = false;
+                                }
+                            }
+                            //Sist. pide mail a usuario hasta que ingresa uno veridico. 
+                            if (validMail == false) { Console.WriteLine("Correo Erroneo."); }
+                        }
+
+
+                        //Ahora checkeo contraseña.
+
+                        bool checkingPassword = true; bool validPassword = false;
+
+
+                        while (checkingPassword)
+                        {
+                            Console.WriteLine("Ingrese Clave: ");
+                            string candidatePassword = Console.ReadLine();
+
+                            if (GestorReprod.Usuarios[loginID].claveUsuario == candidatePassword)
+                            {
+                                Console.WriteLine("Contraseña Valida."); Console.Clear();
+                                validPassword = true; checkingPassword = false;
+                            }
+                         
+                            //Sist. pide password a usuario hasta que ingrese la que corresponde.
+                            if (validPassword == false) { Console.WriteLine("Contraseña invalida."); }
+                        }
+
+                        Console.Clear();
+
+                        //AHORA QUE ESTOY DENTRO DEL SISTEMA, HAGO LO QUE TENGA QUE HACER.
+
+                        break;
+
+                    case 2:
+
+                        Console.Clear();
+
+                        bool creatingUser = true;
+                        while (creatingUser)
+                        {
+                            Console.WriteLine("Ingrese 1 para crear otro usuario, 2 para salir: ");
+                            int choice = Convert.ToInt32(Console.ReadLine());
+
+                            if (choice == 1)
+                            {
+                                GestorReprod.NuevoUsuario();
+                            }
+
+                            if (choice == 2)
+                            {
+                                creatingUser = false; 
+                            }
+
+                        }
+
+                        break;
+
+
+                }
+
+
+
+
             }
+
+
+
+
+
+
+
+            ////Imprimo datos de todos los usuarios en sistema. 
+
+            //for (int i = 0; i < GestorReprod.Usuarios.Count(); i++)
+            //{
+            //    GestorReprod.Usuarios[i].userData();
+            //    Console.WriteLine("\n");
+                
+            //}
         }
     }
 
