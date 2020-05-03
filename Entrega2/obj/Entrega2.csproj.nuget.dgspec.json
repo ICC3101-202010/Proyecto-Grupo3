@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj": {}
+    "C:\\Users\\Viviana Rojas\\Source\\Repos\\Netify\\Entrega2\\Entrega2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj": {
+    "C:\\Users\\Viviana Rojas\\Source\\Repos\\Netify\\Entrega2\\Entrega2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj",
+        "projectUniqueName": "C:\\Users\\Viviana Rojas\\Source\\Repos\\Netify\\Entrega2\\Entrega2.csproj",
         "projectName": "Entrega2",
-        "projectPath": "C:\\Users\\Manuel\\Netify\\Entrega2\\Entrega2.csproj",
-        "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Manuel\\Netify\\Entrega2\\obj\\",
+        "projectPath": "C:\\Users\\Viviana Rojas\\Source\\Repos\\Netify\\Entrega2\\Entrega2.csproj",
+        "packagesPath": "C:\\Users\\Viviana Rojas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viviana Rojas\\Source\\Repos\\Netify\\Entrega2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Viviana Rojas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

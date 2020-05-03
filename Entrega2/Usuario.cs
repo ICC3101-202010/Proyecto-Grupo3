@@ -24,7 +24,7 @@ namespace Entrega2
 
         //Cola de canciones y videos.
 
-        List<Cancion> ColaCanciones;
+        List<Song> ColaCanciones;
         List<Video> ColaVideos;
 
         //Metodo para mostrar info. de un usuario. 

@@ -5,7 +5,7 @@ namespace Entrega2
     class Musico : Usuario
     {
 
-        public List<string> Albums; public List<Cancion> CancionesAlbum;
+        public List<string> Albums; public List<Song> CancionesAlbum;
         public List<string> Generos; public List<string> Albumes; public List<string> Premios;
 
         public Musico(int idUsuario, int metodoPago, string nombre, string apellido, string claveUsuario, string mail, string descripcion, bool privado, bool premium)
@@ -27,7 +27,7 @@ namespace Entrega2
             //Atributos unicos al musico, que parten como listas vacias. 
 
             List<string> Generos = new List<string>(); List<string> Albumes = new List<string>(); List<string> Premios = new List<string>();
-            List<string> Albums = new List<string>(); List<Cancion> CancionesAlbum = new List<Cancion>();
+            List<string> Albums = new List<string>(); List<Song> CancionesAlbum = new List<Song>();
 
 
 
