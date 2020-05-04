@@ -6,8 +6,8 @@ using System.Threading;
 using System.Diagnostics;
 using System.IO;
 using NAudio;
-
-
+using LibVLCSharp;
+using LibVLCSharp.Shared;
 
 namespace Entrega2
 {
@@ -19,13 +19,31 @@ namespace Entrega2
             var curDir = Directory.GetCurrentDirectory();
             string pathSongs = curDir + @"\Songs\";
             string pathVideos = curDir + @"\Videos\";
+            Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
+
+            LibVLCSharp.Shared.Core.Initialize();
+            var inst = new LibVLC();
+            var mp = new MediaPlayer(inst);
+            Console.WriteLine(pathVideos);
+
+            var m = new Media(inst, pathVideos + video1.name +".mp4" , FromType.FromPath);
+            mp.Play(m);
+            Console.ReadLine();
+            
+
+
+
+
+
+
+
 
 
             //NICO
             //Prueba
             //Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
             //System.Diagnostics.Process.Start(pathVideos + "1080.mp4");
-            
+
 
             //MIGUEL
             /*Song cancion = new Song("Circles","Post Malone","pp","disc","","turururu");
