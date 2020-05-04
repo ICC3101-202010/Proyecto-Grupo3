@@ -6,7 +6,6 @@ using System.Threading;
 using System.Diagnostics;
 using System.IO;
 using NAudio;
-using LibVLCSharp;
 using LibVLCSharp.Shared;
 
 namespace Entrega2
@@ -21,7 +20,7 @@ namespace Entrega2
             string pathVideos = curDir + @"\Videos\";
             Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
 
-            LibVLCSharp.Shared.Core.Initialize();
+            Core.Initialize();
             var inst = new LibVLC();
             var mp = new MediaPlayer(inst);
             Console.WriteLine(pathVideos);

@@ -1,0 +1,12 @@
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.csprojAssemblyReference.cache
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\Entrega2.exe.config
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\Entrega2.exe
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\Entrega2.pdb
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\NAudio.dll
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\NAudio.xml
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.csproj.CopyComplete
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.exe
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.pdb
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\LibVLCSharp.dll
+D:\Documentos\GitHub\Netify\Entrega2\Entrega2\bin\Debug\LibVLCSharp.xml
