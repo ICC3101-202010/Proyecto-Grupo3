@@ -6,7 +6,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.IO;
 using NAudio;
-using LibVLCSharp.Shared;
+
 
 
 namespace Entrega2
@@ -23,8 +23,8 @@ namespace Entrega2
 
             //NICO
             //Prueba
-            Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
-            System.Diagnostics.Process.Start(pathVideos + "1080.mp4");
+            //Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
+            //System.Diagnostics.Process.Start(pathVideos + "1080.mp4");
             
 
             //MIGUEL
