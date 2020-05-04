@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Diagnostics;
 using System.IO;
-using NAudio.Wave;
+using NAudio;
+using LibVLCSharp.Shared;
+
 
 namespace Entrega2
 {
@@ -13,16 +15,22 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            //NICO
-            //var curDir = Directory.GetCurrentDirectory();
-            //Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
-            //video1.Play(curDir + @"\" + "Post Malone - Circles 1080p.mp4");
+            //en esta variable esta el directorio actual en donde esta ejecutandose el progrma asi cuando cambie de pc siempre van a tener el directorio mismo directorio si lo usan y le agregan el nombre del archivo
+            var curDir = Directory.GetCurrentDirectory();
+            string pathSongs = curDir + @"\Songs\";
+            string pathVideos = curDir + @"\Videos\";
 
+
+            //NICO
+            //Prueba
+            Video video1 = new Video("Circles", "Post Malone", "Video de la cancion Cirlces", "Post Malone", 1080);
+            System.Diagnostics.Process.Start(pathVideos + "1080.mp4");
+            
 
             //MIGUEL
             /*Song cancion = new Song("Circles","Post Malone","pp","disc","","turururu");
             int choice = Convert.ToInt32(Console.ReadLine());
-            //cancion.Menu(eleccion);
+            cancion.Menu(choice);
             double for_backwards;
             string op;
             string generic_path = @"C:\Users\userprofile\source\repos\Netify\Songs\name.mp3";
@@ -71,6 +79,7 @@ namespace Entrega2
             outputDevice.Dispose();
             */
 
+
             /*string name = "Circles.mp3";
             string fullpath = Path.GetFullPath(name);
             Console.WriteLine(fullpath);
@@ -78,7 +87,7 @@ namespace Entrega2
 
 
 
-            //MANUEL
+            /*//MANUEL
             //Primero, creo instancia de gestor. 
             Gestor GestorReprod = new Gestor();
 
@@ -198,7 +207,7 @@ namespace Entrega2
 
 
 
-            }
+            }*/
 
 
 
@@ -215,7 +224,7 @@ namespace Entrega2
 
             //}
 
-         
+
         }
     }
 }
