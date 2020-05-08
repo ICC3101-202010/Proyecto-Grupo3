@@ -27,9 +27,10 @@ namespace Entrega2
             List<VideoPlaylist> VideosPublicos = new List<VideoPlaylist>();
             List<VideoPlaylist> VideosPrivados = new List<VideoPlaylist>();
 
-            //Atributos unicos al actor, que parten como listas vacias. 
 
-            Peliculas = new List<Video>(); Premios = new List<string>();
+        //Atributos unicos al actor, que parten como listas vacias. 
+
+        Peliculas = new List<Video>(); Premios = new List<string>();
         }
     }
 }

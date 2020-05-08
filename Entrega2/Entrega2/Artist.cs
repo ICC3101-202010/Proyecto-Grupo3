@@ -44,6 +44,8 @@ namespace Entrega2
             List<string> Albums = new List<string>();
             List<Song> CancionesAlbum = new List<Song>();
 
+
+
         }
     }
 }

@@ -29,6 +29,9 @@ namespace Entrega2
         List<VideoPlaylist> VideosPublicos;
         List<VideoPlaylist> VideosPrivados;
 
+        public List<User> UsuariosSeguidos = new List<User>();
+        public List<User> Seguidores = new List<User>();
+
         //Cola de canciones y videos.
 
         List<Song> ColaCanciones;
@@ -48,12 +51,13 @@ namespace Entrega2
             Console.WriteLine("7. Premium: "); Console.WriteLine(this.premium);
         }
 
+        //Metodo para ver seguidores: 
 
+ 
 
         //Metodo para cambiar alguno de los parametros base.
 
-
-        public void cambiarDato(string tipoDato, string nuevoDato)
+        public void cambiarDato()
         {
 
             //Funcion local que muestra parametros a usuario. 

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    class NPerson : User
+    public class NPerson : User
     {
+
+        public List<User> usuariosSeguidos;
+
         public NPerson(int idUsuario, int metodoPago, string nombre, string apellido, string claveUsuario, string mail, string descripcion, bool privado, bool premium)
         {
             //Params. de Usuario.
@@ -29,6 +32,9 @@ namespace Entrega2
             List<VideoPlaylist> VideosPublicos = new List<VideoPlaylist>();
             List<VideoPlaylist> VideosPrivados = new List<VideoPlaylist>();
 
-        }
+            this.usuariosSeguidos = new List<User>();
+            this.Seguidores = new List<User>();
+
+    }
     }
 }
