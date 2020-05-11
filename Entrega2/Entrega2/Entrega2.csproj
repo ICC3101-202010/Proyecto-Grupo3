@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
-    <Compile Include="Artist.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="Gestor.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="NPerson.cs" />

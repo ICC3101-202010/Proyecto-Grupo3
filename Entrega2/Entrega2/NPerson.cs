@@ -6,23 +6,29 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    public class NPerson : User
+    public class NPerson
     {
-
         public List<User> usuariosSeguidos;
-
-        public NPerson(int idUsuario, int metodoPago, string nombre, string apellido, string claveUsuario, string mail, string descripcion, bool privado, bool premium)
+        public List<User> Seguidores = new List<User>();
+        public int IDUser { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string Description { get; set; }
+        public bool Private { get; set; }
+        public bool Premium { get; set; }
+        public NPerson(int idUsuario, string nombre, string apellido, string claveUsuario, string mail, string descripcion, bool privado, bool premium)
         {
             //Params. de Usuario.
-            this.idUsuario = idUsuario;
-            this.metodoPago = metodoPago;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.claveUsuario = claveUsuario;
-            this.mail = mail;
-            this.descripcion = descripcion;
-            this.privado = privado;
-            this.premium = premium;
+            IDUser = idUsuario;
+            Name = nombre;
+            LastName = apellido;
+            Password = claveUsuario;
+            Email = mail;
+            Description = descripcion;
+            Private = privado;
+            Premium = premium;
 
             //Playlists correspondientes.
 
@@ -34,7 +40,6 @@ namespace Entrega2
 
             this.usuariosSeguidos = new List<User>();
             this.Seguidores = new List<User>();
-
-    }
+        }
     }
 }
