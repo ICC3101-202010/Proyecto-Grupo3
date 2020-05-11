@@ -144,14 +144,17 @@ namespace Entrega2
             using (FileStream fs = File.Create(path)) { };//recreate the file empty
             using (StreamWriter sw = new StreamWriter(path))//write data to the file
             {
-                sw.Write(user.IDUser);
-                sw.WriteLine(user.Name);
-                sw.WriteLine(user.LastName);
-                sw.WriteLine(user.Password);
-                sw.WriteLine(user.Email);
-                sw.WriteLine(user.Description);
-                sw.WriteLine(user.Private);
-                sw.WriteLine(user.Premium);
+                foreach (NPerson registered in Users)
+                {
+                    sw.WriteLine(registered.IDUser);
+                    sw.WriteLine(registered.Name);
+                    sw.WriteLine(registered.LastName);
+                    sw.WriteLine(registered.Password);
+                    sw.WriteLine(registered.Email);
+                    sw.WriteLine(registered.Description);
+                    sw.WriteLine(registered.Private);
+                    sw.WriteLine(registered.Premium);
+                }
             }
 
         }

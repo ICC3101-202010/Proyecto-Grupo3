@@ -1,12 +1,4 @@
 0
-Miguel Angel
-Barraza Rojas
-sopaipas
-mabarraza@miuandes.cl
-me gustan las sopaipas
-False
-True
-1
 Angel
 Rojas
 pasadas
