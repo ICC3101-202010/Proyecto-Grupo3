@@ -1636,7 +1636,7 @@ namespace Entrega2
                             if (plst != 0)
                             {
                                 plst--;
-                                //us_plist.VideosPublicos[plst].;
+                                //us_plist2.VideosPublicos:
                             }
                             break;
 
@@ -1764,6 +1764,7 @@ namespace Entrega2
                                 {
                                     data.Users.RemoveAll(x => x.Email == candidatemail);
                                     //data.UserDelete(us, userpath);
+                                    UsersSave(data.Users);
                                     access = true;
                                     Thread.Sleep(1500);
                                     Console.WriteLine("Perfil eliminado con exito. ");
