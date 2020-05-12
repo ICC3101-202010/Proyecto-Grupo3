@@ -11,6 +11,7 @@ namespace Entrega2
     {
         public List<Song> Song = new List<Song>();
         public List<SongPlaylist> playlists = new List<SongPlaylist>();
+        public List<SongPlaylist> thisuserplaylist = new List<SongPlaylist>();
         public List<NPerson> Users = new List<NPerson>();
         public List<Video> Videos = new List<Video>();
 

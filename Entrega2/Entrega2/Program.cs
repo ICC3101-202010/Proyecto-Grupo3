@@ -17,16 +17,14 @@ namespace Entrega2
         {
 
             //MANUEL
-            NPerson user;
             Gestor gestor = new Gestor();
-            Song song;
             DataBase data = new DataBase();
             //List<string> info = new List<string>();
             WaveOutEvent outputdevice = new WaveOutEvent(); 
             var enviroment = System.Environment.CurrentDirectory;
             bool runningprogram = true , firstcase;//changed case1 to first case beccause case 1 is kinda reserved.
             bool loggedin , loginresult1 , menuresult;
-            int mainchoice, i = 0;//choicenu == choice new user;
+            int mainchoice,  loginidd = 0;//choicenu == choice new user;
             string projectDirectory = Directory.GetParent(enviroment).Parent.FullName;
             string txt_songsinfo_path = projectDirectory + @"\Songsinfo.txt";
             string txt_users_path = projectDirectory + @"\Users.txt";
@@ -52,7 +50,7 @@ namespace Entrega2
                         firstcase = true;
                         while (firstcase)
                         {
-                            Tuple<string, bool> loginresult = gestor.Login(data);
+                            Tuple<string, bool> loginresult = gestor.Login(data,ref loginidd);
                             string mailuser = loginresult.Item1;
                             
                             loginresult1 = loginresult.Item2;
@@ -64,7 +62,7 @@ namespace Entrega2
                             {
                                 //user.First(m => m.name == stringToFind);
                                 //string mailuser = 
-                                menuresult = gestor.Menu(data, outputdevice, txt_users_path, txt_songs_path, txt_playlist_path, mailuser);
+                                menuresult = gestor.Menu(data, outputdevice, txt_users_path, txt_songs_path, txt_playlist_path, mailuser,loginidd);
                                 if (!menuresult)
                                 {
                                     firstcase = false;
