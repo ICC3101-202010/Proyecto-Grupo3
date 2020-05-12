@@ -18,3 +18,13 @@ C:\Users\visita\Source\Repos\Netify\Entrega2\Entrega2\bin\Debug\Entrega2.pdb
 C:\Users\visita\Source\Repos\Netify\Entrega2\Entrega2\bin\Debug\NAudio.dll
 C:\Users\visita\Source\Repos\Netify\Entrega2\Entrega2\bin\Debug\NAudio.xml
 C:\Users\visita\Source\Repos\Netify\Entrega2\Entrega2\obj\Debug\Entrega2.csproj.CopyComplete
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\bin\Debug\Entrega2.exe.config
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\bin\Debug\Entrega2.exe
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\bin\Debug\Entrega2.pdb
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\bin\Debug\NAudio.dll
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\bin\Debug\NAudio.xml
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\obj\Debug\Entrega2.csprojAssemblyReference.cache
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\obj\Debug\Entrega2.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\obj\Debug\Entrega2.csproj.CopyComplete
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\obj\Debug\Entrega2.exe
+D:\Documentos\GitHub\Netify Trabajo\Entrega2\Entrega2\obj\Debug\Entrega2.pdb

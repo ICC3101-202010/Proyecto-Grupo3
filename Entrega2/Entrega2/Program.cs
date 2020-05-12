@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using NAudio.Wave;
 using System.Security.Cryptography.X509Certificates;
+using System.Net.Mail;
 
 namespace Entrega2
 {
@@ -14,7 +15,7 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            
+
             //MANUEL
             NPerson user;
             Gestor gestor = new Gestor();
@@ -24,13 +25,15 @@ namespace Entrega2
             WaveOutEvent outputdevice = new WaveOutEvent(); 
             var enviroment = System.Environment.CurrentDirectory;
             bool runningprogram = true , firstcase;//changed case1 to first case beccause case 1 is kinda reserved.
-            bool loggedin , loginresult , menuresult;
+            bool loggedin , loginresult1 , menuresult;
             int mainchoice, i = 0;//choicenu == choice new user;
             string projectDirectory = Directory.GetParent(enviroment).Parent.FullName;
             string txt_songsinfo_path = projectDirectory + @"\Songsinfo.txt";
             string txt_users_path = projectDirectory + @"\Users.txt";
             string txt_songs_path = projectDirectory + @"\Songs\";
             string txt_playlist_path = projectDirectory + @"\Playlistsnum.txt";
+            
+            
 
             //                                    ****************USERS DATA BASE CREATION*********************
             gestor.FilesReader(data, txt_users_path, txt_songsinfo_path,txt_playlist_path);
@@ -49,14 +52,19 @@ namespace Entrega2
                         firstcase = true;
                         while (firstcase)
                         {
-                            loginresult = gestor.Login(data);
-                            if (loginresult == false)
+                            Tuple<string, bool> loginresult = gestor.Login(data);
+                            string mailuser = loginresult.Item1;
+                            
+                            loginresult1 = loginresult.Item2;
+                            if (loginresult1 == false)
                                 break;
                             //Dado que pase filtro del login, puedo hacer lo que quiera. 
                             loggedin = true;
                             while (loggedin)
                             {
-                                menuresult = gestor.Menu(data,outputdevice,txt_users_path,txt_songs_path,txt_playlist_path);
+                                //user.First(m => m.name == stringToFind);
+                                //string mailuser = 
+                                menuresult = gestor.Menu(data, outputdevice, txt_users_path, txt_songs_path, txt_playlist_path, mailuser);
                                 if (!menuresult)
                                 {
                                     firstcase = false;

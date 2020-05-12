@@ -53,7 +53,7 @@ namespace Entrega2
             //}
             Console.WriteLine("Resolucion: {0}", resolution);
             Console.WriteLine("Calificacion: {0}", score);
-            Console.WriteLine("Seguidores: {0}", followers);
+            //Console.WriteLine("Seguidores: {0}", followers);
             
             
         }

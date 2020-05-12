@@ -7,6 +7,7 @@ using System.Threading;
 
 namespace Entrega2
 {
+    [Serializable]
     public abstract class User
     {
         //Parametros base de un usuario.
@@ -22,11 +23,6 @@ namespace Entrega2
         public bool premium;
 
         //Playlists de cualquier usuario.
-
-        List<SongPlaylist> CancionesPublicas;
-        List<SongPlaylist> CancionesPrivadas;
-        List<VideoPlaylist> VideosPublicos;
-        List<VideoPlaylist> VideosPrivados;
 
         public List<User> UsuariosSeguidos = new List<User>();
         public List<User> Seguidores = new List<User>();

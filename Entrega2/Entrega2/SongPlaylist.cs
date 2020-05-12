@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
+    [Serializable]
     public class SongPlaylist
     {
         public string Name { get; set; }

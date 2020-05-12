@@ -52,7 +52,6 @@
     <Compile Include="Actor.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Gestor.cs" />
-    <Compile Include="Movie.cs" />
     <Compile Include="NPerson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

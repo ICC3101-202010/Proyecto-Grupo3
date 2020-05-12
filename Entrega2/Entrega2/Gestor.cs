@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Linq.Expressions;
 
 namespace Entrega2
 {
@@ -21,7 +22,7 @@ namespace Entrega2
             Console.Clear();
             while (creatinguser)
             {
-                Console.Write("ingrese 1 para crear otro usuario, 2 para salir: ");
+                Console.Write("Ingrese 1 para crear otro usuario, 2 para salir: ");
                 choicenu = Convert.ToInt32(Console.ReadLine());
 
                 if (choicenu == 1)
@@ -81,9 +82,12 @@ namespace Entrega2
                     }
 
                     NPerson createdUser = new NPerson(newuserid, newname, newlastname, newpassword, newmail, newdesc, newpriv, newispremium);
-                    data.AddUserData(createdUser, txtpath);
+                    data.Users.Add(createdUser);
+                    //serializacion de usuarios
+                    UsersSave(data.Users);
                     Console.Clear();
                     Console.WriteLine("Usuario creado con exito. ");
+                    Thread.Sleep(2000);
                 }
 
                 else if (choicenu == 2)
@@ -95,10 +99,10 @@ namespace Entrega2
             }
         }
 
-        public bool Login(DataBase data)
+        public Tuple<string, bool> Login(DataBase data)
         {
             string candidatemail, candidatepassword;
-            bool validmail = false, succesful_login = true;
+            bool validmail = false, succesful_login1 = true;
             int intentos = 0, loginid = 0;
             Console.Clear();
 
@@ -110,7 +114,8 @@ namespace Entrega2
 
             //Pido los mails, cuando el que ingreso calza con alguno en la base de datos del gestor
             //guardo la contraseña de aquel usuario para ver que calce con la que ingreso.
-            while (succesful_login)
+            string asdf = "";
+            while (succesful_login1)
             {
                 while (true)
                 {
@@ -119,7 +124,7 @@ namespace Entrega2
                         Console.WriteLine("Alcanzo {0} intentos.", intentos);
                         Console.WriteLine("Volviendo al menu principal...");
                         Thread.Sleep(1000);
-                        succesful_login = false;
+                        succesful_login1 = false;
                         break;
                     }
                     Console.Write("Ingrese Mail: "); candidatemail = Console.ReadLine();
@@ -146,20 +151,22 @@ namespace Entrega2
 
                 //Ahora checkeo contraseña.
                 intentos = 0;
-                while (succesful_login)
+                while (succesful_login1)
                 {
                     if (intentos == 3)
                     {
                         Console.WriteLine("Alcanzo {0} intentos.", intentos);
                         Console.WriteLine("Volviendo al menu principal...");
                         Thread.Sleep(1000);
-                        succesful_login = false;
+                        succesful_login1 = false;
+                        
                         break;
                     }
                     Console.Write("Ingrese Clave: "); candidatepassword = Console.ReadLine();
                     if (data.Users[loginid].Password == candidatepassword)
                     {
                         Console.WriteLine("Contraseña Valida."); Console.Clear();
+                        asdf = data.Users[loginid].Email;
                         break;
                     }
 
@@ -174,11 +181,14 @@ namespace Entrega2
                 Console.Clear();
                 break;
             }
+            
+            Tuple < string, bool > succesful_login = new Tuple<string, bool>(asdf, succesful_login1);
             return succesful_login;
         }
 
-        public bool Menu(DataBase data, WaveOutEvent outputdevice, string userpath, string songpath , string playlistpath)
+        public bool Menu(DataBase data, WaveOutEvent outputdevice, string userpath, string songpath , string playlistpath, string mailuser)//agregue como parametro mailuser para saber en que usuario estamos
         {
+
             string candidatemail, candidatepassword, datatochange, retry, songchoice , deletechoice;
             string playlistname , playlistdate , searchsong , actualgenre = "";
             int logchoice, input, i = 0, nextsong , songplayeroption , songplayeroption2 , searchoice , j = 0;
@@ -193,8 +203,8 @@ namespace Entrega2
             Console.WriteLine("1. Ver datos de todos los usuarios: ");
             Console.WriteLine("2. Actualizar Datos: ");
             Console.WriteLine("3. Menu Canciones: ");
-            Console.WriteLine("4. Canciones: ");
-            Console.WriteLine("5. Menu Videos: ");
+            Console.WriteLine("4. Menu Videos: ");
+            Console.WriteLine("5. Ver Usuarios Seguidos");
             Console.WriteLine("6. Ver Seguidores: ");
             Console.WriteLine("7. Seguir a otros usuarios: ");
             Console.WriteLine("8. Eliminar Perfil: ");
@@ -299,6 +309,7 @@ namespace Entrega2
                 //Buscar contenido, que permite al usuario buscar algun contenido en el gestor.
 
                 case 3:
+                    Console.Clear();
                     while (true)
                     {
                         criterio:
@@ -895,7 +906,7 @@ namespace Entrega2
                 case 4:
 
                     Console.Clear();
-                    //Cargo archivo para canciones ya importadas
+                    //Cargo archivo para Videos ya importados
                     try
                     {
                         data.Videos = VideosLoad();
@@ -939,7 +950,8 @@ namespace Entrega2
 
                             Console.Clear();
                             Console.WriteLine("0. Regresar");
-                            Console.WriteLine("Seleccione un video para reproducir");
+                            Console.WriteLine();
+                            Console.WriteLine("Seleccione un video");
 
                             i = 0;
                             foreach (Video video in data.Videos)
@@ -953,16 +965,81 @@ namespace Entrega2
                             if (vid != 0)
                             {
                                 vid--;
-                                data.Videos[vid].Play();
+                                Video videoescogido = data.Videos[vid]; 
+                                
+                                Console.Clear();
+                                Console.WriteLine();
+                                Console.WriteLine("Escoge que hacer con el video:");
+                                Console.WriteLine("1. Reproducir:");
+                                Console.WriteLine("2. Agregar a Playlist:");
+                                Console.WriteLine("3. Regresar:");
+
+                                var choice = Convert.ToInt32(Console.ReadLine());
+
+                                switch (choice)
+                                {
+                                    case 1:
+
+                                        videoescogido.Play();
+
+                                        break;
+
+                                    case 2:
+                                        Console.WriteLine("1. Agregar a nueva playlist");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Regresar");
+                                        var us_plist1 = data.Users.First(m => m.Email == mailuser);//con esto tenemos el objeto usuario en el que estamos logeados
+                                        
+                                        int choice2 = Convert.ToInt32(Console.ReadLine());
+
+                                        switch (choice2)
+                                        {
+                                            case 1:
+
+                                                break;
+
+                                            case 2:
+
+                                                break;
+
+                                                //us_plist1.VideosPublicos.
+                                        }
+                                                            
+                                        break;
+
+                                    case 3:
+
+                                        Console.Clear();
+                                        break;
+
+                                }
+
+
                             }
 
                             break;
 
                         case 3:
 
+                            var us_plist2 = data.Users.First(m => m.Email == mailuser);//con esto tenemos el objeto usuario en el que estamos logeados
                             Console.Clear();
+                            Console.WriteLine("0. Regresar");
+                            Console.WriteLine();
+                            Console.WriteLine("Seleccione una playlist para reproducir");
 
+                            i = 0;
+                            foreach (VideoPlaylist playlist in us_plist2.VideosPublicos)
+                            {
+                                i++;
+                                Console.WriteLine("{0}. {1}", i, playlist.name);
+                            }
 
+                            int plst = Convert.ToInt32(Console.ReadLine());
+                            if (plst != 0)
+                            {
+                                plst--;
+                                //us_plist.VideosPublicos[plst].;
+                            }
                             break;
 
                         case 4:
@@ -1087,7 +1164,8 @@ namespace Entrega2
                             {
                                 if ((candidatemail == us.Email) && (candidatepassword == us.Password))
                                 {
-                                    data.UserDelete(us, userpath);
+                                    data.Users.RemoveAll(x => x.Email == candidatemail);
+                                    //data.UserDelete(us, userpath);
                                     access = true;
                                     Thread.Sleep(1500);
                                     Console.WriteLine("Perfil eliminado con exito. ");
@@ -1132,11 +1210,24 @@ namespace Entrega2
 
         public void FilesReader(DataBase data, string userspath, string songspath , string playlistspath)
         {
+            try
+            {
+                data.Users = UsersLoad();
+            }
+
+            catch
+            {
+                Console.WriteLine("No hay videos importados porfavor importe algun video antes de seleccionar otra opcion");
+            }
+
+            //data.Song = SongsLoad();para despues
+            
             string s;
             int i = 0 , j = 0;
             List<string> info = new List<string>();
             SongPlaylist playlist;
-            using (StreamReader sr = File.OpenText(userspath))
+
+            /*using (StreamReader sr = File.OpenText(userspath))
             {
                 while ((s = sr.ReadLine()) != null)
                 {
@@ -1149,7 +1240,7 @@ namespace Entrega2
                         info.Clear();
                     }
                 }
-            }
+            }*/
             using (StreamReader sr = File.OpenText(songspath))
             {
                 while ((s = sr.ReadLine()) != null)
@@ -1164,7 +1255,8 @@ namespace Entrega2
                     }
                 }
             }
-            foreach(NPerson us in data.Users){
+            foreach(NPerson us in data.Users)
+            {
                 if(File.Exists(playlistspath.Replace("num",Convert.ToString(j)))){
                     using (StreamReader sr = File.OpenText(playlistspath.Replace("num","0")))
                     {
@@ -1196,7 +1288,9 @@ namespace Entrega2
                 j++;
             }
         }
+
         
+
         public List<string> obtenerArchivosDirectorio(string rutaArchivo)
         {
 
@@ -1225,22 +1319,43 @@ namespace Entrega2
             stream.Close();
             return VideoList;
         }
-        
-        static private void PlaylistVideosSave(List<VideoPlaylist> PlaylistsVideo)
+
+        static private void UsersSave(List<NPerson> UsersList)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("VideoPlaylist.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, PlaylistsVideo);
+            Stream stream = new FileStream("Users.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, UsersList);
+
             stream.Close();
         }
-        
-        static private List<VideoPlaylist> PlaylistVideosLoad()
+
+        static private List<NPerson> UsersLoad()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("VideoPlaylist.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<VideoPlaylist> PlaylistVideoList = (List<VideoPlaylist>)formatter.Deserialize(stream);
+            Stream stream = new FileStream("Users.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<NPerson> UsersList = (List<NPerson>)formatter.Deserialize(stream);
+
             stream.Close();
-            return PlaylistVideoList;
+            return UsersList;
         }
+
+        static private void SongsSave(List<Song> UsersList)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, UsersList);
+
+            stream.Close();
+        }
+        static private List<Song> SongsLoad()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Song> SongList = (List<Song>)formatter.Deserialize(stream);
+
+            stream.Close();
+            return SongList;
+        }
+
     }
 }
