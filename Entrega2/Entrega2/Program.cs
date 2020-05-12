@@ -16,7 +16,6 @@ namespace Entrega2
         {
             
             //MANUEL
-            //Creo algunos usuarios de prueba. 
             NPerson user;
             Gestor gestor = new Gestor();
             Song song;
@@ -31,42 +30,10 @@ namespace Entrega2
             string txt_songsinfo_path = projectDirectory + @"\Songsinfo.txt";
             string txt_users_path = projectDirectory + @"\Users.txt";
             string txt_songs_path = projectDirectory + @"\Songs\";
+            string txt_playlist_path = projectDirectory + @"\Playlistsnum.txt";
 
             //                                    ****************USERS DATA BASE CREATION*********************
-            gestor.FilesReader(data, txt_users_path, txt_songsinfo_path);
-            /*using (StreamReader sr = File.OpenText(txt_users_path))
-            {
-                string s;
-                while ((s = sr.ReadLine()) != null)
-                {
-                    info.Add(s);
-                    i++;
-                    if (i == 8)
-                    {
-                        user = new NPerson(Convert.ToInt32(info[0]), info[1], info[2], info[3], info[4], info[5], Convert.ToBoolean(info[6]), Convert.ToBoolean(info[7]));
-                        data.Users.Add(user);
-                        i = 0;
-                        info.Clear();
-                    }
-                }
-            }
-            using (StreamReader sr = File.OpenText(txt_songsinfo_path))
-            {
-                string s;
-                while ((s = sr.ReadLine()) != null)
-                {
-                    info.Add(s);
-                    i++;
-                    if (i == 6)
-                    {
-                        song = new Song(info[0], info[1], info[2], info[3], info[4], info[5]);
-                        data.Song.Add(song);
-                        i = 0;
-                        info.Clear();
-                    }
-                }
-            }*/
-
+            gestor.FilesReader(data, txt_users_path, txt_songsinfo_path,txt_playlist_path);
             //menu programa general.
             while (runningprogram)
             {

@@ -31,27 +31,70 @@ namespace Entrega2
                 }
             }
         }
-        public void AddToPlaylist(Playlist playlist , string path)//adds the recently created playlist to the database
+        public void AddToPlaylist(Song sg ,Playlist playlist , string path)//adds the recently created playlist to the database
         {                                                         //and creates a new file.txt for it
-            playlists.Add(playlist);
-            File.Create(path);
-            using (StreamWriter sw = new StreamWriter(path))
+            playlist.ActualPlaylist.Add(sg);
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
             {
-                sw.Write(playlist.Name);
-                sw.WriteLine(playlist.Private);
-                sw.WriteLine(playlist.Date);
-                foreach (Song song in playlist.ActualPlaylist)
+                fs.Seek(-3, SeekOrigin.End);
+                using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    sw.WriteLine(song.Name);
-                    sw.WriteLine(song.Album);
-                    sw.WriteLine(song.Artists);
-                    sw.WriteLine(song.Genre);
-                    sw.WriteLine(song.Year);
-                    sw.WriteLine(song.Lyrics);
+                    sw.WriteLine(sg.Name);
+                    sw.WriteLine(sg.Album);
+                    sw.WriteLine(sg.Artists);
+                    sw.WriteLine(sg.Genre);
+                    sw.WriteLine(sg.Year);
+                    sw.WriteLine(sg.Lyrics);
+                    sw.WriteLine("/-*");
                 }
             }
         }
-
+        public void AddPlaylist(Playlist playlist , string path)
+        {
+            playlists.Add(playlist);
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                if (new FileInfo(path).Length == 0)// first users playlist
+                {
+                    using (StreamWriter sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(playlist.Name);
+                        sw.WriteLine(playlist.Private);
+                        sw.WriteLine(playlist.Date);
+                        foreach (Song sg in playlist.ActualPlaylist)
+                        {
+                            sw.WriteLine(sg.Name);
+                            sw.WriteLine(sg.Album);
+                            sw.WriteLine(sg.Artists);
+                            sw.WriteLine(sg.Genre);
+                            sw.WriteLine(sg.Year);
+                            sw.WriteLine(sg.Lyrics);
+                        }
+                        sw.WriteLine("/-*");
+                    }
+                }
+                else                             //new playlist
+                {
+                    fs.Seek(0, SeekOrigin.End);
+                    using (StreamWriter sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(playlist.Name);
+                        sw.WriteLine(playlist.Private);
+                        sw.WriteLine(playlist.Date);
+                        foreach (Song sg in playlist.ActualPlaylist)
+                        {
+                            sw.WriteLine(sg.Name);
+                            sw.WriteLine(sg.Album);
+                            sw.WriteLine(sg.Artists);
+                            sw.WriteLine(sg.Genre);
+                            sw.WriteLine(sg.Year);
+                            sw.WriteLine(sg.Lyrics);
+                        }
+                        sw.WriteLine("/-*");
+                    }
+                }
+            }
+        }
         public void AddUserData(NPerson user , string path)//adds the new user to the data base and to the users.txt file
         {
             Users.Add(user);
@@ -136,7 +179,6 @@ namespace Entrega2
                 }
             }
         }
-
         public void UserDelete(NPerson user, string path)//deletes data from the database, eliminates previous file , creates a new one, write data on it.
         {
             Users.Remove(user);

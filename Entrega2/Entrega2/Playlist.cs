@@ -9,6 +9,7 @@ namespace Entrega2
     public class Playlist
     {
         public string Name { get; set; }
+
         public bool Private { get; set; }
 
         public string Date { get; set; }
@@ -22,7 +23,7 @@ namespace Entrega2
             this.Date = Date;
         }
 
-        public void AddToPlaylist(Song song)
+        public void AddToThisPlaylist(Song song)
         {
             ActualPlaylist.Add(song);
         }

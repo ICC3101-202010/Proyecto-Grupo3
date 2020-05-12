@@ -1,6 +1,7 @@
 ﻿using NAudio.Wave;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -522,11 +523,12 @@ namespace Entrega2
             return true;
         }
 
-        public void FilesReader(DataBase data, string userspath, string songspath)
+        public void FilesReader(DataBase data, string userspath, string songspath , string playlistspath)
         {
             string s;
-            int i = 0;
+            int i = 0 , j = 0;
             List<string> info = new List<string>();
+            Playlist playlist;
             using (StreamReader sr = File.OpenText(userspath))
             {
                 while ((s = sr.ReadLine()) != null)
@@ -554,6 +556,37 @@ namespace Entrega2
                         info.Clear();
                     }
                 }
+            }
+            foreach(NPerson us in data.Users){
+                if(File.Exists(playlistspath.Replace("num",Convert.ToString(j)))){
+                    using (StreamReader sr = File.OpenText(playlistspath.Replace("num","0")))
+                    {
+                        while ((s = sr.ReadLine()) != null)
+                        {
+                            info.Add(s);
+                            if (i == 2)
+                            {
+                                playlist = new Playlist(info[0], Convert.ToBoolean(info[1]), info[2]);
+                                info.Clear();
+                                i = 0;
+                                while ((s = sr.ReadLine()) != "/-*")
+                                {
+                                    info.Add(s);
+                                    i++;
+                                    if (i == 6)
+                                    {
+                                        playlist.AddToThisPlaylist(new Song(info[0], info[1], info[2], info[3], info[4], info[5]));
+                                        i = 0;
+                                        info.Clear();
+                                    }
+                                }
+                                data.playlists.Add(playlist);
+                            }
+                            i++;
+                        }
+                    }
+                }
+                j++;
             }
         }
         public List<string> obtenerArchivosDirectorio(string rutaArchivo)
