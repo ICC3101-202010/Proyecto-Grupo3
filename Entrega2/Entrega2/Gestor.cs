@@ -5,6 +5,8 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Entrega2
 {
@@ -375,6 +377,96 @@ namespace Entrega2
                         }
                     }
                     break;
+
+                case 4:
+
+                    Console.Clear();
+                    //Cargo archivo para canciones ya importadas
+                    try
+                    {
+                        data.Videos = VideosLoad();
+                    }
+                    catch
+                    {
+                        Console.WriteLine("No hay videos importados porfavor importe algun video antes de seleccionar otra opcion");
+                    }
+                    //Menu Videos
+
+                    Console.WriteLine("1. Importar video: ");
+                    Console.WriteLine("2. Listado de videos ");
+                    Console.WriteLine("3. Listado de playlists ");
+                    Console.WriteLine("4. Buscar video ");
+                    Console.WriteLine("5. Mostrar videos seguidos ");
+                    Console.WriteLine("6. Regresar ");
+
+                    int videochoice = Convert.ToInt32(Console.ReadLine());
+
+                    switch (videochoice)
+                    {
+                        case 1:
+
+                            Console.Clear();
+                            Console.WriteLine("Ingrese nombre: "); string name = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese extencion de archivo: (ej: .mp4) "); string extention = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese genero "); string genre = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese categoria: "); string category = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese director: "); string director = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese descripcion "); string description = Console.ReadLine(); Console.Clear();
+                            //Console.WriteLine("Ingrese actores: "); string actor = Console.ReadLine(); Console.Clear();
+                            Console.WriteLine("Ingrese resolucion: "); int resolution = Convert.ToInt32(Console.ReadLine()); Console.Clear();
+
+                            data.addVideo(new Video(name, genre, category, director, description, resolution, extention));
+                            VideosSave(data.Videos);
+                            Console.WriteLine("Video importado con exito");
+                            Thread.Sleep(2000);
+                            break;
+
+                        case 2:
+
+                            Console.Clear();
+                            Console.WriteLine("0. Regresar");
+                            Console.WriteLine("Seleccione un video para reproducir");
+
+                            i = 0;
+                            foreach (Video video in data.Videos)
+                            {
+                                i++;
+                                Console.WriteLine("{0}. {1}", i, video.name);
+                            }
+
+                            int vid = Convert.ToInt32(Console.ReadLine());
+
+                            if (vid != 0)
+                            {
+                                vid--;
+                                data.Videos[vid].Play();
+                            }
+
+                            break;
+
+                        case 3:
+
+                            Console.Clear();
+
+
+                            break;
+
+                        case 4:
+
+                            break;
+
+                        case 5:
+
+                            break;
+
+                        case 6:
+
+                            Console.Clear();
+                            break;
+
+                    }
+
+                    break;
                 //IMPLEMENTAR BUSQUEDA DE CONTENIDO ACA.
 
 
@@ -598,40 +690,9 @@ namespace Entrega2
 
             return listaRuta;
         }
-        ///aca para abajo meti funciones (Nico)
-        /*public void NewVideo()
-        {
-            
-            Console.WriteLine("Ingrese nombre: "); string newName = Console.ReadLine(); Console.Clear();
-            Console.WriteLine("Ingrese genero "); string newGenre = Console.ReadLine(); Console.Clear();
-            Console.WriteLine("Ingrese categoria: "); string newCategory = Console.ReadLine();
-            Console.WriteLine("Ingrese director: "); string newDirector = Console.ReadLine(); Console.Clear();
-            Console.WriteLine("Ingrese descripcion "); string newDescription = Console.ReadLine(); Console.Clear();
-            Console.WriteLine("Ingrese actores: "); string newActor = Console.ReadLine(); //agregar metodo de agregar actores
-            List<Actor> newListActors = new List<Actor>();
-            
-            int confirm = 0;
-            foreach (Actor ac in newListActors)
-            {
-                if (ac.nombre == newActor)
-                {
-                    Console.WriteLine("El Actor ya esta ingresado");
-                    confirm = 1;
-                    break;
-                }
-            }
-            if (confirm == 0)
-            {
-                //en proceso
-                newListActors.Add(new Actor());
-            }
-            
-            Console.WriteLine("Ingrese resolucion: "); int newResolution = Convert.ToInt32(Console.ReadLine()); Console.Clear();
-            Console.WriteLine("Ingrese extencion de archivo: (ej: .mp4) "); string newExtention = Console.ReadLine(); Console.Clear();
-
-            Video video = new Video(newName, newGenre, newCategory, newDirector, newDescription, newListActors, newResolution, newExtention);
-        }
         
+        
+        //Funciones de guardado y lectura de videos y playlist videos
         static private void VideosSave(List<Video> VideoList)
         {
             IFormatter formatter = new BinaryFormatter();
@@ -663,6 +724,6 @@ namespace Entrega2
             List<VideoPlaylist> PlaylistVideoList = (List<VideoPlaylist>)formatter.Deserialize(stream);
             stream.Close();
             return PlaylistVideoList;
-        }*/
+        }
     }
 }

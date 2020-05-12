@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Entrega2
 {
     [Serializable]
-    class VideoPlaylist
+    public class VideoPlaylist
     {
         public string name;
         public List<Video> playlistvideo = new List<Video>();

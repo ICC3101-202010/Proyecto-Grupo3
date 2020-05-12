@@ -12,6 +12,8 @@ namespace Entrega2
         public List<Song> Song = new List<Song>();
         public List<Playlist> playlists = new List<Playlist>();
         public List<NPerson> Users = new List<NPerson>();
+        public List<Video> Videos = new List<Video>();
+        public List<VideoPlaylist> videoPlaylists = new List<VideoPlaylist>();
 
         public void AddSongData(Song song, string path) //adds the new song to the data base and to the songs.txt file
         {
@@ -201,5 +203,11 @@ namespace Entrega2
 
         }
 
+        public void addVideo(Video video)// Agrega un video a la lista de videos y la ordena por orden alfabetico por el atributo nombre
+        {
+            Videos.Add(video);
+            Videos.Sort((x, y) => x.name.CompareTo(y.name));
+
+        }
     }
 }

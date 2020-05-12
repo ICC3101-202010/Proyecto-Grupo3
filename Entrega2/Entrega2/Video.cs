@@ -11,27 +11,27 @@ using System.Diagnostics;
 namespace Entrega2
 {
     [Serializable]
-    class Video
+    public class Video
     {
         public string name;
         public string genre;
         public string category;
         public string director;
         public string description;
-        public List<Actor> actors = new List<Actor>();
+        //public List<Actor> actors = new List<Actor>();
         public int resolution;
         public double score = 0.0;
         int followers = 0;
         public string extention;
 
-        public Video(string name, string genre, string category, string director, string description, List<Actor> actors, int resolution, string extention)
+        public Video(string name, string genre, string category, string director, string description, int resolution, string extention)
         {
             this.name = name;
             this.genre = genre;
             this.category = category;
             this.director = director;
             this.description = description;
-            this.actors = actors;
+            //this.actors = actors;
             this.resolution = resolution;
             this.extention = extention;
 
@@ -46,11 +46,11 @@ namespace Entrega2
             Console.WriteLine("Categoria: {0}", category);
             Console.WriteLine("Director: {0}", director);
             Console.WriteLine("Descripcion: {0}", description);
-            Console.WriteLine("Actores:");
-            foreach (Actor actor in actors)
-            {
-                Console.WriteLine(actor);
-            }
+            //Console.WriteLine("Actores:");
+            //foreach (Actor actor in actors)
+            //{
+            //    Console.WriteLine(actor);
+            //}
             Console.WriteLine("Resolucion: {0}", resolution);
             Console.WriteLine("Calificacion: {0}", score);
             Console.WriteLine("Seguidores: {0}", followers);
@@ -61,9 +61,11 @@ namespace Entrega2
 
         public void Play()
         {
-            var curDir = Directory.GetCurrentDirectory();
-            string pathVideos = curDir + @"\Videos";
-            Process.Start(pathVideos + name + extention);
+            var enviroment = System.Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(enviroment).Parent.FullName;
+            string videos_path = projectDirectory + @"\Videos\";
+            Console.WriteLine(videos_path);
+            Process.Start(videos_path + name + extention);
         }
 
         public void Next()
