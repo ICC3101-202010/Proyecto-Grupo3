@@ -191,8 +191,8 @@ namespace Entrega2
             Console.WriteLine("1. Ver datos de todos los usuarios: ");
             Console.WriteLine("2. Actualizar Datos: ");
             Console.WriteLine("3. Su rollita?: ");
-            Console.WriteLine("4. trae cabritas: ");
-            Console.WriteLine("5. Ver Seguidos: ");
+            Console.WriteLine("4. Canciones: ");
+            Console.WriteLine("5. Menu Videos: ");
             Console.WriteLine("6. Ver Seguidores: ");
             Console.WriteLine("7. Seguir a otros usuarios: ");
             Console.WriteLine("8. Eliminar Perfil: ");
