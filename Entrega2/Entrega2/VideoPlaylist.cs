@@ -14,23 +14,21 @@ namespace Entrega2
     public class VideoPlaylist
     {
         public string name;
-        public List<Video> playlistvideo = new List<Video>();
+        public List<Video> ActualPlaylist = new List<Video>();
 
-        public VideoPlaylist(string name, List<Video> Listvideos)
+        public VideoPlaylist(string name, bool Private)
         {
             this.name = name;
-            this.playlistvideo = Listvideos;
         }
 
-        public void DisplayPlaylist()
+        public void AddToPlaylist(Video video)
         {
-            int count = playlistvideo.Count();
-            Console.WriteLine("La playlist {0} contiene {1} elementos", name , count);
-            
-            foreach (Video video in playlistvideo)
-            {
-                Console.WriteLine(video.name);
-            }
+            ActualPlaylist.Add(video);
+        }
+
+        public void RemoveFromPlaylist(Video video)
+        {
+            ActualPlaylist.Remove(video);
         }
 
 

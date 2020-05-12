@@ -100,43 +100,6 @@ namespace Entrega2
             }
         }
 
-
-        /*public void AddUserData(NPerson user, string path)//adds the new user to the data base and to the users.txt file
-        {
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
-            {
-                if (new FileInfo(path).Length == 0)
-                {
-                    using (StreamWriter sw = new StreamWriter(fs))
-                    {
-                        sw.WriteLine(user.IDUser);
-                        sw.WriteLine(user.Name);
-                        sw.WriteLine(user.LastName);
-                        sw.WriteLine(user.Password);
-                        sw.WriteLine(user.Email);
-                        sw.WriteLine(user.Description);
-                        sw.WriteLine(user.Private);
-                        sw.WriteLine(user.Premium);
-                    }
-                }
-                else
-                {
-                    fs.Seek(0, SeekOrigin.End);
-                    using (StreamWriter sw = new StreamWriter(fs))
-                    {
-                        sw.WriteLine(user.IDUser);
-                        sw.WriteLine(user.Name);
-                        sw.WriteLine(user.LastName);
-                        sw.WriteLine(user.Password);
-                        sw.WriteLine(user.Email);
-                        sw.WriteLine(user.Description);
-                        sw.WriteLine(user.Private);
-                        sw.WriteLine(user.Premium);
-                    }
-                }
-            }
-        }*/
-
         public void UserDataChange(NPerson user, int datapos, string newdata, string path)//replaces the desired data in the database and in the user.txt file
         {
             string text = File.ReadAllText(path);
@@ -186,28 +149,6 @@ namespace Entrega2
             }
         }
 
-        /*public void UserDelete(NPerson user, string path)//deletes data from the database, eliminates previous file , creates a new one, write data on it.
-        {
-            Users.Remove(user);
-            File.Delete(path);//delete the file
-            using (FileStream fs = File.Create(path)) { };//recreate the file empty
-            using (StreamWriter sw = new StreamWriter(path))//write data to the file
-            {
-                foreach (NPerson registered in Users)
-                {
-                    sw.WriteLine(registered.IDUser);
-                    sw.WriteLine(registered.Name);
-                    sw.WriteLine(registered.LastName);
-                    sw.WriteLine(registered.Password);
-                    sw.WriteLine(registered.Email);
-                    sw.WriteLine(registered.Description);
-                    sw.WriteLine(registered.Private);
-                    sw.WriteLine(registered.Premium);
-                }
-            }
-
-        }*/
-
         public void addVideo(Video video)// Agrega un video a la lista de videos y la ordena por orden alfabetico por el atributo nombre
         {
             Videos.Add(video);
@@ -218,8 +159,8 @@ namespace Entrega2
         public void addVideoPlaylist(VideoPlaylist playlist, string user)// Agrega un video a la lista de videos y la ordena por orden alfabetico por el atributo nombre
         {
             var us_plist = Users.First(m => m.Email == user);
-            
-            //Videos.Sort((x, y) => x.name.CompareTo(y.name));
+            //us_plist.VideosPublicos.Add
+            //us_plist.Sort((x, y) => x.name.CompareTo(y.name));
 
         }
     }

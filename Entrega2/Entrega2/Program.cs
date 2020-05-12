@@ -16,10 +16,9 @@ namespace Entrega2
         static void Main(string[] args)
         {
 
-            //MANUEL
+
             Gestor gestor = new Gestor();
             DataBase data = new DataBase();
-            //List<string> info = new List<string>();
             WaveOutEvent outputdevice = new WaveOutEvent(); 
             var enviroment = System.Environment.CurrentDirectory;
             bool runningprogram = true , firstcase;//changed case1 to first case beccause case 1 is kinda reserved.
@@ -81,23 +80,6 @@ namespace Entrega2
                         break;
                 }
             }
-
-
-
-
-
-
-
-
-
-            ////Imprimo datos de todos los usuarios en sistema. 
-
-            //for (int i = 0; i < GestorReprod.Usuarios.Count(); i++)
-            //{
-            //    GestorReprod.Usuarios[i].userData();
-            //    Console.WriteLine("\n");
-
-            //}
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Threading;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 namespace Entrega2
 {
@@ -318,15 +319,15 @@ namespace Entrega2
                     Console.WriteLine("Seleccione un tipo de busqueda de cancion para continuar:");
                     while (true)
                     {
-                        criterio:
+                    criterio:
                         Console.WriteLine("1. Nombre de la cancion.");
                         Console.WriteLine("2. Album.");
                         Console.WriteLine("3. Artist.");
                         Console.WriteLine("4. Genre.");
                         Console.WriteLine("5. Year published.");
                         Console.Write("Seleccione un criterio de busqueda:"); searchoice = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Ingrese info:");searchsong = Console.ReadLine();
-                        switch(searchoice)
+                        Console.Write("Ingrese info:"); searchsong = Console.ReadLine();
+                        switch (searchoice)
                         {
                             case 1:
                                 j = 0;
@@ -1500,7 +1501,7 @@ namespace Entrega2
                         break;
                     }
                     break;
-                    
+
                 case 4:
 
                     Console.Clear();
@@ -1563,8 +1564,8 @@ namespace Entrega2
                             if (vid != 0)
                             {
                                 vid--;
-                                Video videoescogido = data.Videos[vid]; 
-                                
+                                Video videoescogido = data.Videos[vid];
+
                                 Console.Clear();
                                 Console.WriteLine();
                                 Console.WriteLine("Escoge que hacer con el video:");
@@ -1583,26 +1584,93 @@ namespace Entrega2
                                         break;
 
                                     case 2:
+                                        Console.Clear();
                                         Console.WriteLine("1. Agregar a nueva playlist");
                                         Console.WriteLine("2. Agregar a playlist");
-                                        Console.WriteLine("3. Regresar");
+                                        Console.WriteLine("3. Editar una playlist");
+                                        Console.WriteLine("4. Regresar");
                                         var us_plist1 = data.Users.First(m => m.Email == mailuser);//con esto tenemos el objeto usuario en el que estamos logeados
-                                        
+
                                         int choice2 = Convert.ToInt32(Console.ReadLine());
 
                                         switch (choice2)
                                         {
                                             case 1:
+                                                Console.Clear();
+                                                Console.WriteLine("Escribe un nombre para la Playlist");
+                                                string nombre = Console.ReadLine();
 
+                                                Console.WriteLine("Deseas que sea privada?");
+                                                Console.WriteLine("1. Si | 2. No");
+                                                int priv = Convert.ToInt32(Console.ReadLine());
+                                                bool priv1 = false;
+                                                if (priv == 1)
+                                                {
+                                                    priv1 = true;
+                                                }
+                                                else if (priv == 2)
+                                                {
+                                                    priv1 = false;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("Valor no reconocido");
+                                                    Thread.Sleep(2000);
+                                                    break;
+                                                }
+
+                                                VideoPlaylist newplst = new VideoPlaylist(nombre, priv1);
+
+                                                newplst.AddToPlaylist(videoescogido);
+                                                us_plist1.VideosPublicos.Add(newplst);
+                                                UsersSave(data.Users);
+                                                Console.WriteLine("Lista creada con exito");
+                                                Thread.Sleep(2000);
                                                 break;
 
                                             case 2:
 
+                                                Console.WriteLine("Agregar a playlist publica");
+
+                                                Console.WriteLine("1. Si | 2. No");
+                                                string y = Console.ReadLine();
+
+
+                                                if (y == "1")
+                                                {
+                                                    foreach (VideoPlaylist videoPlaylist in us_plist1.VideosPublicos)
+                                                    {
+                                                        Console.WriteLine(videoPlaylist.name);
+                                                    }
+                                                }
+                                                else if (y == "2")
+                                                {
+                                                    foreach (VideoPlaylist videoPlaylist in us_plist1.VideosPrivados)
+                                                    {
+                                                        Console.WriteLine(videoPlaylist.name);
+                                                    }
+
+                                                }
+
+                                                else
+                                                {
+                                                    Console.WriteLine("No reconocido, regresando");
+                                                    Thread.Sleep(2000);
+                                                    break;
+                                                }
+
                                                 break;
 
-                                                //us_plist1.VideosPublicos.
+
+                                            case 3:
+
+                                                break;
+
+                                            case 4:
+
+                                                break;
                                         }
-                                                            
+
                                         break;
 
                                     case 3:
@@ -1661,15 +1729,15 @@ namespace Entrega2
 
                 //Ver seguidos, que llama a metodo de usuario que permite hacer esto. 
 
-                /*
-                case 5:
 
+                /*case 5:
+                    var us_seg1 = data.Users.First(m => m.Email == mailuser);
                     Console.WriteLine("Lista de Seguidos: ");
                     Console.WriteLine("\n");
 
-                    for (int i = 0; i < GestorReprod.Usuarios[loginid].UsuariosSeguidos.Count(); i++)
+                    for (int i = 0; i < us_seg1.usuariosSeguidos.Count(); i++)
                     {
-                        Console.WriteLine(Convert.ToString(i) + ". " + GestorReprod.Usuarios[loginid].UsuariosSeguidos[i].nombre + " " + GestorReprod.Usuarios[loginid].UsuariosSeguidos[i].apellido);//Show info.
+                        Console.WriteLine(Convert.ToString(i) + ". " + data.Users[loginid].UsuariosSeguidos[i].nombre + " " + GestorReprod.Usuarios[loginid].UsuariosSeguidos[i].apellido);//Show info.
                         Thread.Sleep(2000);
                     }
 
@@ -1693,7 +1761,7 @@ namespace Entrega2
                     break;
 
 
-
+                    
                 //Seguir usuarios. Para este caso, decidi construir el metodo aca mismo. 
 
                 case 7:
@@ -1737,8 +1805,7 @@ namespace Entrega2
                         Thread.Sleep(1500);
                     }
 
-                    break;
-                    */
+                    break;*/
 
 
                 //Opcion de eliminar perfil. 
@@ -1825,21 +1892,6 @@ namespace Entrega2
             int i = 0 , j = 0;
             List<string> info = new List<string>();
             SongPlaylist playlist;
-
-            /*using (StreamReader sr = File.OpenText(userspath))
-            {
-                while ((s = sr.ReadLine()) != null)
-                {
-                    info.Add(s);
-                    i++;
-                    if (i == 8)
-                    {
-                        data.Users.Add(new NPerson(Convert.ToInt32(info[0]), info[1], info[2], info[3], info[4], info[5], Convert.ToBoolean(info[6]), Convert.ToBoolean(info[7])));
-                        i = 0;
-                        info.Clear();
-                    }
-                }
-            }*/
             using (StreamReader sr = File.OpenText(songspath))
             {
                 while ((s = sr.ReadLine()) != null)

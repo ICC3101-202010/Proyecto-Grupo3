@@ -14,7 +14,6 @@ namespace Entrega2
         public string Genre { get; set; }
         public string Album { get; set; }
         public string Name { get; set; }//will contain name and format.
-        //private string discography;//TAKE OFF THE UML 
         public string Year { get; set; }
         public Song(string Name, string Album, string Artists, string Genre, string Year, string Lyrics)
         {
