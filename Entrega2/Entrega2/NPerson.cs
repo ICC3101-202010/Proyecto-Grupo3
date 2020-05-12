@@ -32,7 +32,6 @@ namespace Entrega2
 
             //Playlists correspondientes.
 
-            List<Playlist> Playlists = new List<Playlist>();
             List<SongPlaylist> CancionesPublicas = new List<SongPlaylist>();
             List<SongPlaylist> CancionesPrivadas = new List<SongPlaylist>();
             List<VideoPlaylist> VideosPublicos = new List<VideoPlaylist>();

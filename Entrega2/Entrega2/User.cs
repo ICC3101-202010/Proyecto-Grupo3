@@ -23,7 +23,6 @@ namespace Entrega2
 
         //Playlists de cualquier usuario.
 
-        List<Playlist> Playlists;
         List<SongPlaylist> CancionesPublicas;
         List<SongPlaylist> CancionesPrivadas;
         List<VideoPlaylist> VideosPublicos;

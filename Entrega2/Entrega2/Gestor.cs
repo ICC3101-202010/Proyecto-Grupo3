@@ -177,12 +177,14 @@ namespace Entrega2
             return succesful_login;
         }
 
-        public bool Menu(DataBase data, WaveOutEvent outputdevice, string userpath, string songpath)
+        public bool Menu(DataBase data, WaveOutEvent outputdevice, string userpath, string songpath , string playlistpath)
         {
-            string candidatemail, candidatepassword, datatochange, retry, songchoice, songplayeroption, deletechoice;
-            int logchoice, input, i = 0, nextsong;
+            string candidatemail, candidatepassword, datatochange, retry, songchoice , deletechoice;
+            string playlistname , playlistdate , searchsong , actualgenre = "";
+            int logchoice, input, i = 0, nextsong , songplayeroption , songplayeroption2 , searchoice , j = 0;
+            bool access = false , privateplaylist = false;
             AudioFileReader songfile;
-            bool access = false;
+            List<Song> searchcriteria = new List<Song>();
 
             Console.Clear();
 
@@ -190,7 +192,7 @@ namespace Entrega2
 
             Console.WriteLine("1. Ver datos de todos los usuarios: ");
             Console.WriteLine("2. Actualizar Datos: ");
-            Console.WriteLine("3. Su rollita?: ");
+            Console.WriteLine("3. Menu Canciones: ");
             Console.WriteLine("4. Canciones: ");
             Console.WriteLine("5. Menu Videos: ");
             Console.WriteLine("6. Ver Seguidores: ");
@@ -297,87 +299,599 @@ namespace Entrega2
                 //Buscar contenido, que permite al usuario buscar algun contenido en el gestor.
 
                 case 3:
+                    while (true)
+                    {
+                        criterio:
+                        Console.WriteLine("1. Nombre de la cancion.");
+                        Console.WriteLine("2. Album.");
+                        Console.WriteLine("3. Artist.");
+                        Console.WriteLine("4. Genre.");
+                        Console.WriteLine("5. Year published.");
+                        Console.Write("Seleccione un criterio de busqueda:"); searchoice = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Ingrese info:");searchsong = Console.ReadLine();
+                        switch(searchoice)
+                        {
+                            case 1:
+                                j = 0;
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (((searchsong+".mp3")==sg.Name)||((searchsong+".mp4")==sg.Name)||((searchsong+".wav")==sg.Name))
+                                    {
+                                        Console.WriteLine("Resultado de busqueda:");
+                                        Console.WriteLine("Nombre: {0}",sg.Name);
+                                        Console.WriteLine("Album: {0}",sg.Album);
+                                        Console.WriteLine("Artista: {0}",sg.Artists);
+                                        Console.WriteLine("Year: {0}",sg.Year);
+                                        Console.WriteLine("Desea reproducir la cancion?");
+                                        Console.WriteLine("1. Reproducir");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Salir");
+                                        Console.Write("Ingrese opcion:");songplayeroption = Convert.ToInt32(Console.ReadLine());
+                                        switch(songplayeroption)
+                                        {
+                                            case 1:
+                                                if (outputdevice.PlaybackState == PlaybackState.Playing)
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    data.Song[j].SkiptoSong(outputdevice, songfile);
+                                                }
+                                                else
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    outputdevice.Init(songfile);
+                                                    data.Song[j].PlaySong(outputdevice);
+                                                }
+                                                while (true) 
+                                                {
+                                                    Console.WriteLine("Que desea hacer?");
+                                                    Console.WriteLine("1. Pausa.");
+                                                    Console.WriteLine("2. Play another song.");
+                                                    Console.WriteLine("3. Adelantar/Retroceder.");
+                                                    Console.WriteLine("4. Play.");
+                                                    Console.WriteLine("5. Restart Song.");
+                                                    Console.WriteLine("6. Create PlayList");
+                                                    Console.WriteLine("7. Busqueda de Cancion.");
+                                                    Console.WriteLine("8. Close Program.");
+                                                    Console.Write("Ingrese opcion:"); songplayeroption2 = Convert.ToInt32(Console.ReadLine());
+                                                    switch(songplayeroption2)
+                                                    {
+                                                        case 1:
+                                                            data.Song[0].PauseSong(outputdevice);
+                                                            break;
+                                                        case 2:
+                                                            i = 0;
+                                                            foreach (Song sonG in data.Song)
+                                                            {
+                                                                i++;
+                                                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
 
-                    foreach (Song sonG in data.Song)
-                    {
-                        i++;
-                        Console.WriteLine("[{0}] {1}", i, sonG.Name);
+                                                            }
+                                                            Console.WriteLine("Seleccione una cancion para reproducirla.");
+                                                            nextsong = Convert.ToInt32(Console.ReadLine());
+                                                            Console.WriteLine(data.Song.Count);
+                                                            Console.WriteLine(nextsong - 1);
+                                                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
+                                                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            break;
+                                                        case 3:
+                                                            Console.WriteLine("Ingrese el tiempo en segundos:");
+                                                            double seconds = Convert.ToDouble(Console.ReadLine());
+                                                            data.Song[0].Forwards_Backwards(songfile, seconds);
+                                                            break;
+                                                        case 4:
+                                                            data.Song[0].PlaySong(outputdevice);
+                                                            break;
+                                                        case 5:
+                                                            data.Song[0].Forwards_Backwards(songfile, 0);
+                                                            break;
+                                                        case 6:
+                                                            //data.AddPlaylist();
+                                                            break;
+                                                        case 7:
+                                                            goto criterio;
+                                                        case 8:
+                                                            //data.Song[0].LastSesionTime(songfile);
+                                                            outputdevice.Stop();
+                                                            outputdevice.Dispose();
+                                                            Console.WriteLine("Cerrando reproductor de musica...");
+                                                            Thread.Sleep(1000);
+                                                            break;
+                                                    }
+                                                    if (songplayeroption2 == 8)
+                                                        break;
+                                                }
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                outputdevice.Stop();
+                                                outputdevice.Dispose();
+                                                Console.WriteLine("Cerrando reproductor de musica...");
+                                                Thread.Sleep(1000);
+                                                break;
+                                        } 
+                                    }
+                                    j++;
+                                }
+                                break;
+                            case 2:
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (searchsong == sg.Album)
+                                    {
+                                        searchcriteria.Add(sg);
+                                    }
+                                }
+                                foreach (Song sg in searchcriteria)
+                                {
+                                    Console.WriteLine("Resultado de busqueda:");
+                                    Console.WriteLine("Nombre: {0}", sg.Name);
+                                    Console.WriteLine("Album: {0}", sg.Album);
+                                    Console.WriteLine("Year: {0}", sg.Year);
+                                }
+                                searchcriteria.Clear();
+                                Console.Write("Elija una cancion:"); searchsong = Console.ReadLine();
+                                j = 0;
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (((searchsong + ".mp3") == sg.Name) || ((searchsong + ".mp4") == sg.Name) || ((searchsong + ".wav") == sg.Name))
+                                    {
+                                        Console.WriteLine("Desea reproducir la cancion?");
+                                        Console.WriteLine("1. Reproducir");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Salir");
+                                        Console.Write("Ingrese opcion:"); songplayeroption = Convert.ToInt32(Console.ReadLine());
+                                        switch (songplayeroption)
+                                        {
+                                            case 1:
+                                                if (outputdevice.PlaybackState == PlaybackState.Playing)
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    data.Song[j].SkiptoSong(outputdevice, songfile);
+                                                }
+                                                else
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    outputdevice.Init(songfile);
+                                                    data.Song[j].PlaySong(outputdevice);
+                                                }
+                                                while (true)
+                                                {
+                                                    Console.WriteLine("Que desea hacer?");
+                                                    Console.WriteLine("1. Pausa.");
+                                                    Console.WriteLine("2. Play another song.");
+                                                    Console.WriteLine("3. Adelantar/Retroceder.");
+                                                    Console.WriteLine("4. Play.");
+                                                    Console.WriteLine("5. Restart Song.");
+                                                    Console.WriteLine("6. Create PlayList");
+                                                    Console.WriteLine("7. Busqueda de Cancion.");
+                                                    Console.WriteLine("8. Close Program.");
+                                                    Console.Write("Ingrese opcion:"); songplayeroption2 = Convert.ToInt32(Console.ReadLine());
+                                                    switch (songplayeroption2)
+                                                    {
+                                                        case 1:
+                                                            data.Song[0].PauseSong(outputdevice);
+                                                            break;
+                                                        case 2:
+                                                            i = 0;
+                                                            foreach (Song sonG in data.Song)
+                                                            {
+                                                                i++;
+                                                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
 
-                    }
-                song_choice:
-                    Console.WriteLine("Seleccione una cancion para reproducirla."); songchoice = Console.ReadLine();
-                    if (songchoice == "1")
-                    {
-                        songfile = new AudioFileReader(songpath + data.Song[0].Name);
-                        outputdevice.Init(songfile);
-                        data.Song[0].PlaySong(outputdevice);
-                    }
-                    else if (songchoice == "2")
-                    {
-                        songfile = new AudioFileReader(songpath + data.Song[1].Name);
-                        outputdevice.Init(songfile);
-                        data.Song[0].PlaySong(outputdevice);
-                    }
-                    else if (songchoice == "3")
-                    {
-                        songfile = new AudioFileReader(songpath + data.Song[2].Name);
-                        outputdevice.Init(songfile);
-                        data.Song[0].PlaySong(outputdevice);
-                    }
-                    else
-                    {
-                        Console.WriteLine("No existe esa cancion , vuelva a intentarlo");
-                        goto song_choice;
-                    }
-                    //song_choice1:
-                    while (songchoice != "4")
-                    {
-                        Console.WriteLine("Opciones\n[1]Pausa.\n[2]Play another song\n[3]Adelantar/retroceder\n[4]Play\n[5]Restart\n[6]Close program");
-                        songplayeroption = Console.ReadLine();
-                        if (songplayeroption == "1")
-                        {
-                            data.Song[0].PauseSong(outputdevice);
-                        }
-                        else if (songplayeroption == "2")
-                        {
-                            i = 0;
-                            foreach (Song sonG in data.Song)
-                            {
-                                i++;
-                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
+                                                            }
+                                                            Console.WriteLine("Seleccione una cancion para reproducirla.");
+                                                            nextsong = Convert.ToInt32(Console.ReadLine());
+                                                            Console.WriteLine(data.Song.Count);
+                                                            Console.WriteLine(nextsong - 1);
+                                                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
+                                                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            break;
+                                                        case 3:
+                                                            Console.WriteLine("Ingrese el tiempo en segundos:");
+                                                            double seconds = Convert.ToDouble(Console.ReadLine());
+                                                            data.Song[0].Forwards_Backwards(songfile, seconds);
+                                                            break;
+                                                        case 4:
+                                                            data.Song[0].PlaySong(outputdevice);
+                                                            break;
+                                                        case 5:
+                                                            data.Song[0].Forwards_Backwards(songfile, 0);
+                                                            break;
+                                                        case 6:
+                                                            //data.AddPlaylist();
+                                                            break;
+                                                        case 7:
+                                                            goto criterio;
+                                                        case 8:
+                                                            //data.Song[0].LastSesionTime(songfile);
+                                                            outputdevice.Stop();
+                                                            outputdevice.Dispose();
+                                                            Console.WriteLine("Cerrando reproductor de musica...");
+                                                            Thread.Sleep(1000);
+                                                            break;
+                                                    }
+                                                    if (songplayeroption2 == 8)
+                                                        break;
+                                                }
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                outputdevice.Stop();
+                                                outputdevice.Dispose();
+                                                Console.WriteLine("Cerrando reproductor de musica...");
+                                                Thread.Sleep(1000);
+                                                break;
+                                        }
+                                    }
+                                    j++;
+                                }
+                                break;
+                            case 3:
+                                foreach(Song sg in data.Song)
+                                {
+                                    if(searchsong==sg.Artists)
+                                    {
+                                        searchcriteria.Add(sg);
+                                    }
+                                }
+                                foreach (Song sg in searchcriteria)
+                                {
+                                    Console.WriteLine("Resultado de busqueda:");
+                                    Console.WriteLine("Nombre: {0}", sg.Name);
+                                    Console.WriteLine("Album: {0}", sg.Album);
+                                    Console.WriteLine("Year: {0}", sg.Year);
+                                }
+                                searchcriteria.Clear();
+                                Console.Write("Elija una cancion:"); searchsong = Console.ReadLine();
+                                j = 0;
+                                foreach (Song sg in data.Song) { 
+                                    if (((searchsong + ".mp3") == sg.Name) || ((searchsong + ".mp4") == sg.Name) || ((searchsong + ".wav") == sg.Name))
+                                    {
+                                        Console.WriteLine("Desea reproducir la cancion?");
+                                        Console.WriteLine("1. Reproducir");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Salir");
+                                        Console.Write("Ingrese opcion:"); songplayeroption = Convert.ToInt32(Console.ReadLine());
+                                        switch (songplayeroption)
+                                        {
+                                            case 1:
+                                                if (outputdevice.PlaybackState == PlaybackState.Playing)
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    data.Song[j].SkiptoSong(outputdevice,songfile);
+                                                }
+                                                else
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    outputdevice.Init(songfile);
+                                                    data.Song[j].PlaySong(outputdevice);
+                                                }
+                                                while (true)
+                                                {
+                                                    Console.WriteLine("Que desea hacer?");
+                                                    Console.WriteLine("1. Pausa.");
+                                                    Console.WriteLine("2. Play another song.");
+                                                    Console.WriteLine("3. Adelantar/Retroceder.");
+                                                    Console.WriteLine("4. Play.");
+                                                    Console.WriteLine("5. Restart Song.");
+                                                    Console.WriteLine("6. Create PlayList");
+                                                    Console.WriteLine("7. Busqueda de Cancion.");
+                                                    Console.WriteLine("8. Close Program.");
+                                                    Console.Write("Ingrese opcion:"); songplayeroption2 = Convert.ToInt32(Console.ReadLine());
+                                                    switch (songplayeroption2)
+                                                    {
+                                                        case 1:
+                                                            data.Song[0].PauseSong(outputdevice);
+                                                            break;
+                                                        case 2:
+                                                            i = 0;
+                                                            foreach (Song sonG in data.Song)
+                                                            {
+                                                                i++;
+                                                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
 
-                            }
-                            Console.WriteLine("Seleccione una cancion para reproducirla.");
-                            nextsong = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine(data.Song.Count);
-                            Console.WriteLine(nextsong - 1);
-                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
-                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            }
+                                                            Console.WriteLine("Seleccione una cancion para reproducirla.");
+                                                            nextsong = Convert.ToInt32(Console.ReadLine());
+                                                            Console.WriteLine(data.Song.Count);
+                                                            Console.WriteLine(nextsong - 1);
+                                                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
+                                                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            break;
+                                                        case 3:
+                                                            Console.WriteLine("Ingrese el tiempo en segundos:");
+                                                            double seconds = Convert.ToDouble(Console.ReadLine());
+                                                            data.Song[0].Forwards_Backwards(songfile, seconds);
+                                                            break;
+                                                        case 4:
+                                                            data.Song[0].PlaySong(outputdevice);
+                                                            break;
+                                                        case 5:
+                                                            data.Song[0].Forwards_Backwards(songfile, 0);
+                                                            break;
+                                                        case 6:
+                                                            //data.AddPlaylist();
+                                                            break;
+                                                        case 7:
+                                                            goto criterio;
+                                                        case 8:
+                                                            //data.Song[0].LastSesionTime(songfile);
+                                                            outputdevice.Stop();
+                                                            outputdevice.Dispose();
+                                                            Console.WriteLine("Cerrando reproductor de musica...");
+                                                            Thread.Sleep(1000);
+                                                            break;
+                                                    }
+                                                    if (songplayeroption2 == 8)
+                                                        break;
+                                                }
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                outputdevice.Stop();
+                                                outputdevice.Dispose();
+                                                Console.WriteLine("Cerrando reproductor de musica...");
+                                                Thread.Sleep(1000);
+                                                break;
+                                        }
+                                    }
+                                    j++;
+                                }
+                                searchcriteria.Clear();
+                                break;
+                            case 4:
+                                foreach (Song sg in data.Song)
+                                {
+                                    foreach(char ch in sg.Genre)
+                                    {
+                                        
+                                        if(ch!=' ')
+                                        {
+                                            actualgenre += ch;
+                                            if (actualgenre == searchsong)
+                                            {
+                                                searchcriteria.Add(sg);
+                                                actualgenre = "";
+                                            }
+                                        }
+                                        else
+                                            actualgenre = "";
+
+
+                                    }
+                                    actualgenre = "";
+                                }
+                                foreach (Song sg in searchcriteria)
+                                {
+                                    Console.WriteLine("Resultado de busqueda:");
+                                    Console.WriteLine("Nombre: {0}", sg.Name);
+                                    Console.WriteLine("Album: {0}", sg.Album);
+                                    Console.WriteLine("Artists: {0}",sg.Artists);
+                                    Console.WriteLine("Year: {0}", sg.Year);
+                                }
+                                searchcriteria.Clear();
+                                Console.Write("Elija una cancion:"); searchsong = Console.ReadLine();
+                                j = 0;
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (((searchsong + ".mp3") == sg.Name) || ((searchsong + ".mp4") == sg.Name) || ((searchsong + ".wav") == sg.Name))
+                                    {
+                                        Console.WriteLine("Desea reproducir la cancion?");
+                                        Console.WriteLine("1. Reproducir");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Salir");
+                                        Console.Write("Ingrese opcion:"); songplayeroption = Convert.ToInt32(Console.ReadLine());
+                                        switch (songplayeroption)
+                                        {
+                                            case 1:
+                                                if (outputdevice.PlaybackState == PlaybackState.Playing)
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    data.Song[j].SkiptoSong(outputdevice, songfile);
+                                                }
+                                                else
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    outputdevice.Init(songfile);
+                                                    data.Song[j].PlaySong(outputdevice);
+                                                }
+                                                while (true)
+                                                {
+                                                    Console.WriteLine("Que desea hacer?");
+                                                    Console.WriteLine("1. Pausa.");
+                                                    Console.WriteLine("2. Play another song.");
+                                                    Console.WriteLine("3. Adelantar/Retroceder.");
+                                                    Console.WriteLine("4. Play.");
+                                                    Console.WriteLine("5. Restart Song.");
+                                                    Console.WriteLine("6. Create PlayList");
+                                                    Console.WriteLine("7. Busqueda de Cancion.");
+                                                    Console.WriteLine("8. Close Program.");
+                                                    Console.Write("Ingrese opcion:"); songplayeroption2 = Convert.ToInt32(Console.ReadLine());
+                                                    switch (songplayeroption2)
+                                                    {
+                                                        case 1:
+                                                            data.Song[0].PauseSong(outputdevice);
+                                                            break;
+                                                        case 2:
+                                                            i = 0;
+                                                            foreach (Song sonG in data.Song)
+                                                            {
+                                                                i++;
+                                                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
+
+                                                            }
+                                                            Console.WriteLine("Seleccione una cancion para reproducirla.");
+                                                            nextsong = Convert.ToInt32(Console.ReadLine());
+                                                            Console.WriteLine(data.Song.Count);
+                                                            Console.WriteLine(nextsong - 1);
+                                                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
+                                                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            break;
+                                                        case 3:
+                                                            Console.WriteLine("Ingrese el tiempo en segundos:");
+                                                            double seconds = Convert.ToDouble(Console.ReadLine());
+                                                            data.Song[0].Forwards_Backwards(songfile, seconds);
+                                                            break;
+                                                        case 4:
+                                                            data.Song[0].PlaySong(outputdevice);
+                                                            break;
+                                                        case 5:
+                                                            data.Song[0].Forwards_Backwards(songfile, 0);
+                                                            break;
+                                                        case 6:
+                                                            //data.AddPlaylist();
+                                                            break;
+                                                        case 7:
+                                                            goto criterio;
+                                                        case 8:
+                                                            //data.Song[0].LastSesionTime(songfile);
+                                                            outputdevice.Stop();
+                                                            outputdevice.Dispose();
+                                                            Console.WriteLine("Cerrando reproductor de musica...");
+                                                            Thread.Sleep(1000);
+                                                            break;
+                                                    }
+                                                    if (songplayeroption2 == 8)
+                                                        break;
+                                                }
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                outputdevice.Stop();
+                                                outputdevice.Dispose();
+                                                Console.WriteLine("Cerrando reproductor de musica...");
+                                                Thread.Sleep(1000);
+                                                break;
+                                        }
+                                    }
+                                    j++;
+                                }
+                                searchcriteria.Clear();
+                                break;
+                            case 5:
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (searchsong == sg.Year)
+                                    {
+                                        searchcriteria.Add(sg);
+                                    }
+                                }
+                                foreach (Song sg in searchcriteria)
+                                {
+                                    Console.WriteLine("Resultado de busqueda:");
+                                    Console.WriteLine("Nombre: {0}", sg.Name);
+                                    Console.WriteLine("Album: {0}", sg.Album);
+                                    Console.WriteLine("Artista: {0}", sg.Artists);
+                                }
+                                searchcriteria.Clear();
+                                Console.Write("Elija una cancion:"); searchsong = Console.ReadLine();
+                                j = 0;
+                                foreach (Song sg in data.Song)
+                                {
+                                    if (((searchsong + ".mp3") == sg.Name) || ((searchsong + ".mp4") == sg.Name) || ((searchsong + ".wav") == sg.Name))
+                                    {
+                                        Console.WriteLine("Desea reproducir la cancion?");
+                                        Console.WriteLine("1. Reproducir");
+                                        Console.WriteLine("2. Agregar a playlist");
+                                        Console.WriteLine("3. Salir");
+                                        Console.Write("Ingrese opcion:"); songplayeroption = Convert.ToInt32(Console.ReadLine());
+                                        switch (songplayeroption)
+                                        {
+                                            case 1:
+                                                if (outputdevice.PlaybackState == PlaybackState.Playing)
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    data.Song[j].SkiptoSong(outputdevice, songfile);
+                                                }
+                                                else
+                                                {
+                                                    songfile = new AudioFileReader(songpath + data.Song[j].Name);
+                                                    outputdevice.Init(songfile);
+                                                    data.Song[j].PlaySong(outputdevice);
+                                                }
+                                                while (true)
+                                                {
+                                                    Console.WriteLine("Que desea hacer?");
+                                                    Console.WriteLine("1. Pausa.");
+                                                    Console.WriteLine("2. Play another song.");
+                                                    Console.WriteLine("3. Adelantar/Retroceder.");
+                                                    Console.WriteLine("4. Play.");
+                                                    Console.WriteLine("5. Restart Song.");
+                                                    Console.WriteLine("6. Create PlayList");
+                                                    Console.WriteLine("7. Busqueda de Cancion.");
+                                                    Console.WriteLine("8. Close Program.");
+                                                    Console.Write("Ingrese opcion:"); songplayeroption2 = Convert.ToInt32(Console.ReadLine());
+                                                    switch (songplayeroption2)
+                                                    {
+                                                        case 1:
+                                                            data.Song[0].PauseSong(outputdevice);
+                                                            break;
+                                                        case 2:
+                                                            i = 0;
+                                                            foreach (Song sonG in data.Song)
+                                                            {
+                                                                i++;
+                                                                Console.WriteLine("[{0}] {1}", i, sonG.Name);
+
+                                                            }
+                                                            Console.WriteLine("Seleccione una cancion para reproducirla.");
+                                                            nextsong = Convert.ToInt32(Console.ReadLine());
+                                                            Console.WriteLine(data.Song.Count);
+                                                            Console.WriteLine(nextsong - 1);
+                                                            songfile = new AudioFileReader(songpath + data.Song[nextsong - 1].Name);
+                                                            data.Song[nextsong - 1].SkiptoSong(outputdevice, songfile);
+                                                            break;
+                                                        case 3:
+                                                            Console.WriteLine("Ingrese el tiempo en segundos:");
+                                                            double seconds = Convert.ToDouble(Console.ReadLine());
+                                                            data.Song[0].Forwards_Backwards(songfile, seconds);
+                                                            break;
+                                                        case 4:
+                                                            data.Song[0].PlaySong(outputdevice);
+                                                            break;
+                                                        case 5:
+                                                            data.Song[0].Forwards_Backwards(songfile, 0);
+                                                            break;
+                                                        case 6:
+                                                            //data.AddPlaylist();
+                                                            break;
+                                                        case 7:
+                                                            goto criterio;
+                                                        case 8:
+                                                            //data.Song[0].LastSesionTime(songfile);
+                                                            outputdevice.Stop();
+                                                            outputdevice.Dispose();
+                                                            Console.WriteLine("Cerrando reproductor de musica...");
+                                                            Thread.Sleep(1000);
+                                                            break;
+                                                    }
+                                                    if (songplayeroption2 == 8)
+                                                        break;
+                                                }
+                                                break;
+                                            case 2:
+                                                break;
+                                            case 3:
+                                                outputdevice.Stop();
+                                                outputdevice.Dispose();
+                                                Console.WriteLine("Cerrando reproductor de musica...");
+                                                Thread.Sleep(1000);
+                                                break;
+                                        }
+                                    }
+                                    j++;
+                                }
+                                searchcriteria.Clear();
+                                break;
                         }
-                        else if (songplayeroption == "3")
-                        {
-                            double seconds = Convert.ToDouble(Console.ReadLine());
-                            data.Song[0].Forwards_Backwards(songfile, seconds);
-                        }
-                        else if (songplayeroption == "4")
-                        {
-                            data.Song[0].PlaySong(outputdevice);
-                        }
-                        else if (songplayeroption == "5")
-                        {
-                            data.Song[0].Forwards_Backwards(songfile, 0);
-                        }
-                        else if (songplayeroption == "6")
-                        {
-                            outputdevice.Stop();
-                            outputdevice.Dispose();
-                            Console.WriteLine("Cerrando reproductor de musica...");
-                            Thread.Sleep(1000);
-                            break;
-                        }
+                        break;
                     }
                     break;
-
+                    
                 case 4:
 
                     Console.Clear();
@@ -614,13 +1128,14 @@ namespace Entrega2
             }
             return true;
         }
+       
 
         public void FilesReader(DataBase data, string userspath, string songspath , string playlistspath)
         {
             string s;
             int i = 0 , j = 0;
             List<string> info = new List<string>();
-            Playlist playlist;
+            SongPlaylist playlist;
             using (StreamReader sr = File.OpenText(userspath))
             {
                 while ((s = sr.ReadLine()) != null)
@@ -658,7 +1173,7 @@ namespace Entrega2
                             info.Add(s);
                             if (i == 2)
                             {
-                                playlist = new Playlist(info[0], Convert.ToBoolean(info[1]), info[2]);
+                                playlist = new SongPlaylist(info[0], Convert.ToBoolean(info[1]), info[2]);
                                 info.Clear();
                                 i = 0;
                                 while ((s = sr.ReadLine()) != "/-*")
@@ -681,6 +1196,7 @@ namespace Entrega2
                 j++;
             }
         }
+        
         public List<string> obtenerArchivosDirectorio(string rutaArchivo)
         {
 
@@ -690,8 +1206,6 @@ namespace Entrega2
 
             return listaRuta;
         }
-        
-        
         //Funciones de guardado y lectura de videos y playlist videos
         static private void VideosSave(List<Video> VideoList)
         {
@@ -701,6 +1215,7 @@ namespace Entrega2
             
             stream.Close();
         }
+        
         static private List<Video> VideosLoad()
         {
             IFormatter formatter = new BinaryFormatter();
@@ -710,6 +1225,7 @@ namespace Entrega2
             stream.Close();
             return VideoList;
         }
+        
         static private void PlaylistVideosSave(List<VideoPlaylist> PlaylistsVideo)
         {
             IFormatter formatter = new BinaryFormatter();
@@ -717,6 +1233,7 @@ namespace Entrega2
             formatter.Serialize(stream, PlaylistsVideo);
             stream.Close();
         }
+        
         static private List<VideoPlaylist> PlaylistVideosLoad()
         {
             IFormatter formatter = new BinaryFormatter();

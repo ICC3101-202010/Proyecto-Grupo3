@@ -45,5 +45,10 @@ namespace Entrega2
         {
             song.CurrentTime = TimeSpan.FromSeconds(seconds);
         }
+        public double LastSesionTime(AudioFileReader song)
+        {
+            double finaltime = Convert.ToDouble(song.CurrentTime);
+            return finaltime;
+        }
     }
 }

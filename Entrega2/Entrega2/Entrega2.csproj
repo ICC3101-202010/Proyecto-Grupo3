@@ -54,7 +54,6 @@
     <Compile Include="Gestor.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="NPerson.cs" />
-    <Compile Include="Playlist.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Song.cs" />

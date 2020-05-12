@@ -20,7 +20,7 @@ namespace Entrega2
             Gestor gestor = new Gestor();
             Song song;
             DataBase data = new DataBase();
-            List<string> info = new List<string>();
+            //List<string> info = new List<string>();
             WaveOutEvent outputdevice = new WaveOutEvent(); 
             var enviroment = System.Environment.CurrentDirectory;
             bool runningprogram = true , firstcase;//changed case1 to first case beccause case 1 is kinda reserved.
@@ -56,7 +56,7 @@ namespace Entrega2
                             loggedin = true;
                             while (loggedin)
                             {
-                                menuresult = gestor.Menu(data,outputdevice,txt_users_path,txt_songs_path);
+                                menuresult = gestor.Menu(data,outputdevice,txt_users_path,txt_songs_path,txt_playlist_path);
                                 if (!menuresult)
                                 {
                                     firstcase = false;

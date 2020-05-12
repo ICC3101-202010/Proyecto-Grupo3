@@ -10,7 +10,7 @@ namespace Entrega2
     public class DataBase
     {
         public List<Song> Song = new List<Song>();
-        public List<Playlist> playlists = new List<Playlist>();
+        public List<SongPlaylist> playlists = new List<SongPlaylist>();
         public List<NPerson> Users = new List<NPerson>();
         public List<Video> Videos = new List<Video>();
         public List<VideoPlaylist> videoPlaylists = new List<VideoPlaylist>();
@@ -33,12 +33,13 @@ namespace Entrega2
                 }
             }
         }
-        public void AddToPlaylist(Song sg ,Playlist playlist , string path)//adds the recently created playlist to the database
+       
+        public void AddToPlaylist(Song sg ,SongPlaylist playlist , string path)//adds the recently created playlist to the database
         {                                                         //and creates a new file.txt for it
             playlist.ActualPlaylist.Add(sg);
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
             {
-                fs.Seek(-3, SeekOrigin.End);
+                fs.Seek(0, SeekOrigin.End);
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     sw.WriteLine(sg.Name);
@@ -51,7 +52,8 @@ namespace Entrega2
                 }
             }
         }
-        public void AddPlaylist(Playlist playlist , string path)
+        
+        public void AddPlaylist(SongPlaylist playlist , string path)
         {
             playlists.Add(playlist);
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
@@ -75,7 +77,7 @@ namespace Entrega2
                         sw.WriteLine("/-*");
                     }
                 }
-                else                             //new playlist
+                else                             //user already has a playlist
                 {
                     fs.Seek(0, SeekOrigin.End);
                     using (StreamWriter sw = new StreamWriter(fs))
@@ -97,6 +99,7 @@ namespace Entrega2
                 }
             }
         }
+        
         public void AddUserData(NPerson user , string path)//adds the new user to the data base and to the users.txt file
         {
             Users.Add(user);
@@ -133,6 +136,7 @@ namespace Entrega2
                 }
             }
         }
+        
         public void UserDataChange(NPerson user, int datapos, string newdata, string path)//replaces the desired data in the database and in the user.txt file
         {
             string text = File.ReadAllText(path);
@@ -181,6 +185,7 @@ namespace Entrega2
                 }
             }
         }
+       
         public void UserDelete(NPerson user, string path)//deletes data from the database, eliminates previous file , creates a new one, write data on it.
         {
             Users.Remove(user);

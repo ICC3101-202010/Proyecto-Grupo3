@@ -6,3 +6,11 @@ mabarraza96@gmail.com
 sopaipillas pasadas
 True
 False
+1
+Miguel
+Barraza
+sopaipas
+mabarraza@miuandes.cl
+hola
+False
+True
