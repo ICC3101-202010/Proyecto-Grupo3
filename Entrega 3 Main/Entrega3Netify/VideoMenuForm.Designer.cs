@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoMenuForm));
             this.VideoImportbtn = new System.Windows.Forms.Button();
             this.ListVideosbtn = new System.Windows.Forms.Button();
             this.playlistbtn = new System.Windows.Forms.Button();
@@ -78,8 +79,27 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.atrasmisplaylistbtn = new System.Windows.Forms.Button();
             this.searchpannel = new System.Windows.Forms.Panel();
+            this.reproducirsearchbtn = new System.Windows.Forms.Button();
+            this.searchscoretextbox = new System.Windows.Forms.TextBox();
+            this.searchresolutiontextbox = new System.Windows.Forms.TextBox();
+            this.searchdirectortextbox = new System.Windows.Forms.TextBox();
+            this.searchcategorytextbox = new System.Windows.Forms.TextBox();
+            this.searchgenretextbox = new System.Windows.Forms.TextBox();
+            this.searchnametextbox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.searchbtn = new System.Windows.Forms.Button();
             this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.atrassearchbtn = new System.Windows.Forms.Button();
             this.favoritespannel = new System.Windows.Forms.Panel();
             this.eliminarfavbtn = new System.Windows.Forms.Button();
@@ -92,25 +112,6 @@
             this.resolutionColumnFav = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.scoreColumnFav = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.atrasfavoritebtn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.searchnametextbox = new System.Windows.Forms.TextBox();
-            this.searchgenretextbox = new System.Windows.Forms.TextBox();
-            this.searchcategorytextbox = new System.Windows.Forms.TextBox();
-            this.searchdirectortextbox = new System.Windows.Forms.TextBox();
-            this.searchresolutiontextbox = new System.Windows.Forms.TextBox();
-            this.searchscoretextbox = new System.Windows.Forms.TextBox();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.reproducirsearchbtn = new System.Windows.Forms.Button();
             this.ImportedListViewPannel.SuspendLayout();
             this.ImportVideoPannel.SuspendLayout();
             this.MainVideoPannel.SuspendLayout();
@@ -593,6 +594,113 @@
             this.searchpannel.TabIndex = 25;
             this.searchpannel.Visible = false;
             // 
+            // reproducirsearchbtn
+            // 
+            this.reproducirsearchbtn.Location = new System.Drawing.Point(207, 309);
+            this.reproducirsearchbtn.Name = "reproducirsearchbtn";
+            this.reproducirsearchbtn.Size = new System.Drawing.Size(108, 41);
+            this.reproducirsearchbtn.TabIndex = 17;
+            this.reproducirsearchbtn.Text = "Reproducir";
+            this.reproducirsearchbtn.UseVisualStyleBackColor = true;
+            this.reproducirsearchbtn.Click += new System.EventHandler(this.reproducirsearchbtn_Click);
+            // 
+            // searchscoretextbox
+            // 
+            this.searchscoretextbox.Location = new System.Drawing.Point(305, 68);
+            this.searchscoretextbox.Name = "searchscoretextbox";
+            this.searchscoretextbox.Size = new System.Drawing.Size(129, 20);
+            this.searchscoretextbox.TabIndex = 16;
+            // 
+            // searchresolutiontextbox
+            // 
+            this.searchresolutiontextbox.Location = new System.Drawing.Point(305, 40);
+            this.searchresolutiontextbox.Name = "searchresolutiontextbox";
+            this.searchresolutiontextbox.Size = new System.Drawing.Size(129, 20);
+            this.searchresolutiontextbox.TabIndex = 15;
+            // 
+            // searchdirectortextbox
+            // 
+            this.searchdirectortextbox.Location = new System.Drawing.Point(305, 14);
+            this.searchdirectortextbox.Name = "searchdirectortextbox";
+            this.searchdirectortextbox.Size = new System.Drawing.Size(129, 20);
+            this.searchdirectortextbox.TabIndex = 14;
+            // 
+            // searchcategorytextbox
+            // 
+            this.searchcategorytextbox.Location = new System.Drawing.Point(120, 68);
+            this.searchcategorytextbox.Name = "searchcategorytextbox";
+            this.searchcategorytextbox.Size = new System.Drawing.Size(123, 20);
+            this.searchcategorytextbox.TabIndex = 13;
+            // 
+            // searchgenretextbox
+            // 
+            this.searchgenretextbox.Location = new System.Drawing.Point(120, 40);
+            this.searchgenretextbox.Name = "searchgenretextbox";
+            this.searchgenretextbox.Size = new System.Drawing.Size(123, 20);
+            this.searchgenretextbox.TabIndex = 12;
+            // 
+            // searchnametextbox
+            // 
+            this.searchnametextbox.Location = new System.Drawing.Point(120, 15);
+            this.searchnametextbox.Name = "searchnametextbox";
+            this.searchnametextbox.Size = new System.Drawing.Size(123, 20);
+            this.searchnametextbox.TabIndex = 11;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(256, 71);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Puntaje";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(246, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Resolucion";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(262, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Director";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(67, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Categoria";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(71, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Genero";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(70, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Nombre";
+            // 
             // searchbtn
             // 
             this.searchbtn.Location = new System.Drawing.Point(29, 309);
@@ -621,6 +729,40 @@
             this.listView4.TabIndex = 3;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "    Nombre";
+            this.columnHeader7.Width = 88;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Genero";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 75;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Categoria";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader9.Width = 76;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Director";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10.Width = 71;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Resolución";
+            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader11.Width = 75;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Puntaje";
+            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // atrassearchbtn
             // 
@@ -723,158 +865,18 @@
             this.atrasfavoritebtn.UseVisualStyleBackColor = true;
             this.atrasfavoritebtn.Click += new System.EventHandler(this.atrasfavoritebtn_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Nombre";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Genero";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(67, 71);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Categoria";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(262, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Director";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(246, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Resolucion";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(256, 71);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Puntaje";
-            // 
-            // searchnametextbox
-            // 
-            this.searchnametextbox.Location = new System.Drawing.Point(120, 15);
-            this.searchnametextbox.Name = "searchnametextbox";
-            this.searchnametextbox.Size = new System.Drawing.Size(123, 20);
-            this.searchnametextbox.TabIndex = 11;
-            // 
-            // searchgenretextbox
-            // 
-            this.searchgenretextbox.Location = new System.Drawing.Point(120, 40);
-            this.searchgenretextbox.Name = "searchgenretextbox";
-            this.searchgenretextbox.Size = new System.Drawing.Size(123, 20);
-            this.searchgenretextbox.TabIndex = 12;
-            // 
-            // searchcategorytextbox
-            // 
-            this.searchcategorytextbox.Location = new System.Drawing.Point(120, 68);
-            this.searchcategorytextbox.Name = "searchcategorytextbox";
-            this.searchcategorytextbox.Size = new System.Drawing.Size(123, 20);
-            this.searchcategorytextbox.TabIndex = 13;
-            // 
-            // searchdirectortextbox
-            // 
-            this.searchdirectortextbox.Location = new System.Drawing.Point(305, 14);
-            this.searchdirectortextbox.Name = "searchdirectortextbox";
-            this.searchdirectortextbox.Size = new System.Drawing.Size(129, 20);
-            this.searchdirectortextbox.TabIndex = 14;
-            // 
-            // searchresolutiontextbox
-            // 
-            this.searchresolutiontextbox.Location = new System.Drawing.Point(305, 40);
-            this.searchresolutiontextbox.Name = "searchresolutiontextbox";
-            this.searchresolutiontextbox.Size = new System.Drawing.Size(129, 20);
-            this.searchresolutiontextbox.TabIndex = 15;
-            // 
-            // searchscoretextbox
-            // 
-            this.searchscoretextbox.Location = new System.Drawing.Point(305, 68);
-            this.searchscoretextbox.Name = "searchscoretextbox";
-            this.searchscoretextbox.Size = new System.Drawing.Size(129, 20);
-            this.searchscoretextbox.TabIndex = 16;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "    Nombre";
-            this.columnHeader7.Width = 88;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Genero";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 75;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Categoria";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader9.Width = 76;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Director";
-            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader10.Width = 71;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Resolución";
-            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader11.Width = 75;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Puntaje";
-            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // reproducirsearchbtn
-            // 
-            this.reproducirsearchbtn.Location = new System.Drawing.Point(207, 309);
-            this.reproducirsearchbtn.Name = "reproducirsearchbtn";
-            this.reproducirsearchbtn.Size = new System.Drawing.Size(108, 41);
-            this.reproducirsearchbtn.TabIndex = 17;
-            this.reproducirsearchbtn.Text = "Reproducir";
-            this.reproducirsearchbtn.UseVisualStyleBackColor = true;
-            this.reproducirsearchbtn.Click += new System.EventHandler(this.reproducirsearchbtn_Click);
-            // 
             // VideoMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 376);
+            this.Controls.Add(this.MainVideoPannel);
             this.Controls.Add(this.searchpannel);
             this.Controls.Add(this.favoritespannel);
             this.Controls.Add(this.MisplaylistPannel);
             this.Controls.Add(this.ImportedListViewPannel);
             this.Controls.Add(this.ImportVideoPannel);
-            this.Controls.Add(this.MainVideoPannel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VideoMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Videos";

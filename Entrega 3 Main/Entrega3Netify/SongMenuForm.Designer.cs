@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SongMenuForm));
             this.ROPanel = new System.Windows.Forms.Panel();
             this.DeleteSongButton = new System.Windows.Forms.Button();
             this.UploadSongButton = new System.Windows.Forms.Button();
@@ -140,29 +141,29 @@
             // DeleteSongButton
             // 
             this.DeleteSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteSongButton.ForeColor = System.Drawing.Color.Aqua;
+            this.DeleteSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DeleteSongButton.Location = new System.Drawing.Point(2, 49);
             this.DeleteSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteSongButton.Name = "DeleteSongButton";
             this.DeleteSongButton.Size = new System.Drawing.Size(142, 30);
             this.DeleteSongButton.TabIndex = 9;
-            this.DeleteSongButton.Text = "Delete Song\r\n";
-            this.DeleteSongButton.UseVisualStyleBackColor = false;
+            this.DeleteSongButton.Text = "Eliminar Cancion\r\n";
+            this.DeleteSongButton.UseVisualStyleBackColor = true;
             this.DeleteSongButton.Click += new System.EventHandler(this.DeleteSongButton_Click);
             // 
             // UploadSongButton
             // 
             this.UploadSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UploadSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadSongButton.ForeColor = System.Drawing.Color.Aqua;
-            this.UploadSongButton.Location = new System.Drawing.Point(477, 49);
+            this.UploadSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.UploadSongButton.Location = new System.Drawing.Point(476, 49);
             this.UploadSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.UploadSongButton.Name = "UploadSongButton";
             this.UploadSongButton.Size = new System.Drawing.Size(142, 30);
             this.UploadSongButton.TabIndex = 8;
-            this.UploadSongButton.Text = "Upload Song";
-            this.UploadSongButton.UseVisualStyleBackColor = false;
+            this.UploadSongButton.Text = "Importar Cancion";
+            this.UploadSongButton.UseVisualStyleBackColor = true;
             this.UploadSongButton.Click += new System.EventHandler(this.UploadSongButton_Click);
             // 
             // VolLabel
@@ -171,9 +172,9 @@
             this.VolLabel.Location = new System.Drawing.Point(9, 32);
             this.VolLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VolLabel.Name = "VolLabel";
-            this.VolLabel.Size = new System.Drawing.Size(42, 13);
+            this.VolLabel.Size = new System.Drawing.Size(48, 13);
             this.VolLabel.TabIndex = 0;
-            this.VolLabel.Text = "Volume";
+            this.VolLabel.Text = "Volumen";
             // 
             // VolumeLabel
             // 
@@ -216,43 +217,43 @@
             // PreviouSongButton
             // 
             this.PreviouSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PreviouSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviouSongButton.ForeColor = System.Drawing.Color.Aqua;
+            this.PreviouSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviouSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.PreviouSongButton.Location = new System.Drawing.Point(168, 49);
             this.PreviouSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.PreviouSongButton.Name = "PreviouSongButton";
             this.PreviouSongButton.Size = new System.Drawing.Size(66, 30);
             this.PreviouSongButton.TabIndex = 2;
             this.PreviouSongButton.Text = "⏮";
-            this.PreviouSongButton.UseVisualStyleBackColor = false;
+            this.PreviouSongButton.UseVisualStyleBackColor = true;
             this.PreviouSongButton.Click += new System.EventHandler(this.PreviouSongButton_Click);
             // 
             // NextSongButton
             // 
             this.NextSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NextSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextSongButton.ForeColor = System.Drawing.Color.Aqua;
+            this.NextSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NextSongButton.Location = new System.Drawing.Point(386, 49);
             this.NextSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextSongButton.Name = "NextSongButton";
             this.NextSongButton.Size = new System.Drawing.Size(66, 30);
             this.NextSongButton.TabIndex = 1;
             this.NextSongButton.Text = "⏭";
-            this.NextSongButton.UseVisualStyleBackColor = false;
+            this.NextSongButton.UseVisualStyleBackColor = true;
             this.NextSongButton.Click += new System.EventHandler(this.NextSongButton_Click);
             // 
             // StopButton
             // 
             this.StopButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StopButton.ForeColor = System.Drawing.Color.Aqua;
+            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StopButton.Location = new System.Drawing.Point(276, 49);
             this.StopButton.Margin = new System.Windows.Forms.Padding(2);
             this.StopButton.Name = "StopButton";
             this.StopButton.Size = new System.Drawing.Size(66, 30);
             this.StopButton.TabIndex = 0;
             this.StopButton.Text = "⏸️";
-            this.StopButton.UseVisualStyleBackColor = false;
+            this.StopButton.UseVisualStyleBackColor = true;
             this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // panel1
@@ -281,14 +282,14 @@
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchButton.ForeColor = System.Drawing.Color.Aqua;
+            this.SearchButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SearchButton.Location = new System.Drawing.Point(494, 5);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(88, 28);
             this.SearchButton.TabIndex = 0;
-            this.SearchButton.Text = "Search";
-            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Text = "Buscar";
+            this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // SearchTextBox
@@ -304,11 +305,12 @@
             this.SSFLPanel.AutoScroll = true;
             this.SSFLPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SSFLPanel.Controls.Add(this.flowLayoutPanel1);
+            this.SSFLPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SSFLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.SSFLPanel.Location = new System.Drawing.Point(199, 40);
+            this.SSFLPanel.Location = new System.Drawing.Point(200, 40);
             this.SSFLPanel.Margin = new System.Windows.Forms.Padding(2);
             this.SSFLPanel.Name = "SSFLPanel";
-            this.SSFLPanel.Size = new System.Drawing.Size(440, 243);
+            this.SSFLPanel.Size = new System.Drawing.Size(439, 243);
             this.SSFLPanel.TabIndex = 7;
             // 
             // flowLayoutPanel1
@@ -345,13 +347,13 @@
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.BackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BackButton.Location = new System.Drawing.Point(257, 207);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(100, 27);
             this.BackButton.TabIndex = 11;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Text = "Atras";
+            this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // GenreTextBox
@@ -364,22 +366,22 @@
             // GenreLabel
             // 
             this.GenreLabel.AutoSize = true;
-            this.GenreLabel.Location = new System.Drawing.Point(125, 137);
+            this.GenreLabel.Location = new System.Drawing.Point(127, 137);
             this.GenreLabel.Name = "GenreLabel";
-            this.GenreLabel.Size = new System.Drawing.Size(39, 13);
+            this.GenreLabel.Size = new System.Drawing.Size(45, 13);
             this.GenreLabel.TabIndex = 9;
-            this.GenreLabel.Text = "Genre:";
+            this.GenreLabel.Text = "Genero:";
             // 
             // ConfirmUploadButton
             // 
             this.ConfirmUploadButton.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ConfirmUploadButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ConfirmUploadButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ConfirmUploadButton.Location = new System.Drawing.Point(128, 207);
             this.ConfirmUploadButton.Name = "ConfirmUploadButton";
             this.ConfirmUploadButton.Size = new System.Drawing.Size(100, 27);
             this.ConfirmUploadButton.TabIndex = 8;
             this.ConfirmUploadButton.Text = "Importar";
-            this.ConfirmUploadButton.UseVisualStyleBackColor = false;
+            this.ConfirmUploadButton.UseVisualStyleBackColor = true;
             this.ConfirmUploadButton.Click += new System.EventHandler(this.ConfirmUploadButton_Click);
             // 
             // YearTextBox
@@ -394,9 +396,9 @@
             this.YearLabel.AutoSize = true;
             this.YearLabel.Location = new System.Drawing.Point(125, 175);
             this.YearLabel.Name = "YearLabel";
-            this.YearLabel.Size = new System.Drawing.Size(32, 13);
+            this.YearLabel.Size = new System.Drawing.Size(29, 13);
             this.YearLabel.TabIndex = 6;
-            this.YearLabel.Text = "Year:";
+            this.YearLabel.Text = "Año:";
             // 
             // ArtistTextBox
             // 
@@ -408,11 +410,11 @@
             // ArtistLabel
             // 
             this.ArtistLabel.AutoSize = true;
-            this.ArtistLabel.Location = new System.Drawing.Point(125, 98);
+            this.ArtistLabel.Location = new System.Drawing.Point(127, 98);
             this.ArtistLabel.Name = "ArtistLabel";
-            this.ArtistLabel.Size = new System.Drawing.Size(33, 13);
+            this.ArtistLabel.Size = new System.Drawing.Size(39, 13);
             this.ArtistLabel.TabIndex = 4;
-            this.ArtistLabel.Text = "Artist:";
+            this.ArtistLabel.Text = "Artista:";
             // 
             // AlbumTextBox
             // 
@@ -424,7 +426,7 @@
             // AlbumLabel
             // 
             this.AlbumLabel.AutoSize = true;
-            this.AlbumLabel.Location = new System.Drawing.Point(125, 51);
+            this.AlbumLabel.Location = new System.Drawing.Point(127, 51);
             this.AlbumLabel.Name = "AlbumLabel";
             this.AlbumLabel.Size = new System.Drawing.Size(39, 13);
             this.AlbumLabel.TabIndex = 2;
@@ -442,9 +444,9 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.Location = new System.Drawing.Point(125, 13);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(38, 13);
+            this.NameLabel.Size = new System.Drawing.Size(47, 13);
             this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "Name:";
+            this.NameLabel.Text = "Nombre:";
             // 
             // SongTimeTimer
             // 
@@ -473,53 +475,53 @@
             // NewPlaylistButton
             // 
             this.NewPlaylistButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NewPlaylistButton.ForeColor = System.Drawing.Color.Aqua;
+            this.NewPlaylistButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NewPlaylistButton.Location = new System.Drawing.Point(2, 2);
             this.NewPlaylistButton.Margin = new System.Windows.Forms.Padding(2);
             this.NewPlaylistButton.Name = "NewPlaylistButton";
             this.NewPlaylistButton.Size = new System.Drawing.Size(88, 28);
             this.NewPlaylistButton.TabIndex = 1;
-            this.NewPlaylistButton.Text = "New Playlist";
-            this.NewPlaylistButton.UseVisualStyleBackColor = false;
+            this.NewPlaylistButton.Text = "Nueva Playlist";
+            this.NewPlaylistButton.UseVisualStyleBackColor = true;
             this.NewPlaylistButton.Click += new System.EventHandler(this.NewPlaylistButton_Click);
             // 
             // DeletePlaylistButton
             // 
             this.DeletePlaylistButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeletePlaylistButton.ForeColor = System.Drawing.Color.Aqua;
+            this.DeletePlaylistButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DeletePlaylistButton.Location = new System.Drawing.Point(2, 34);
             this.DeletePlaylistButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeletePlaylistButton.Name = "DeletePlaylistButton";
             this.DeletePlaylistButton.Size = new System.Drawing.Size(88, 28);
             this.DeletePlaylistButton.TabIndex = 2;
-            this.DeletePlaylistButton.Text = "Delete Playlist";
-            this.DeletePlaylistButton.UseVisualStyleBackColor = false;
+            this.DeletePlaylistButton.Text = "Eliminar Playlist";
+            this.DeletePlaylistButton.UseVisualStyleBackColor = true;
             this.DeletePlaylistButton.Click += new System.EventHandler(this.DeletePlaylistButton_Click);
             // 
             // AddSongPlaylist
             // 
             this.AddSongPlaylist.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.AddSongPlaylist.ForeColor = System.Drawing.Color.Aqua;
+            this.AddSongPlaylist.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddSongPlaylist.Location = new System.Drawing.Point(2, 66);
             this.AddSongPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.AddSongPlaylist.Name = "AddSongPlaylist";
             this.AddSongPlaylist.Size = new System.Drawing.Size(88, 28);
             this.AddSongPlaylist.TabIndex = 3;
-            this.AddSongPlaylist.Text = "Add To Playlist\r\n";
-            this.AddSongPlaylist.UseVisualStyleBackColor = false;
+            this.AddSongPlaylist.Text = "Agregar a Playlist\r\n";
+            this.AddSongPlaylist.UseVisualStyleBackColor = true;
             this.AddSongPlaylist.Click += new System.EventHandler(this.AddSongPlaylist_Click);
             // 
             // RemoveSongButton
             // 
             this.RemoveSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RemoveSongButton.ForeColor = System.Drawing.Color.Aqua;
+            this.RemoveSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RemoveSongButton.Location = new System.Drawing.Point(2, 98);
             this.RemoveSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveSongButton.Name = "RemoveSongButton";
             this.RemoveSongButton.Size = new System.Drawing.Size(88, 42);
             this.RemoveSongButton.TabIndex = 4;
-            this.RemoveSongButton.Text = "Remove from\r\nPlaylist\r\n";
-            this.RemoveSongButton.UseVisualStyleBackColor = false;
+            this.RemoveSongButton.Text = "Remover de Playlist\r\n";
+            this.RemoveSongButton.UseVisualStyleBackColor = true;
             this.RemoveSongButton.Click += new System.EventHandler(this.RemoveSongButton_Click);
             // 
             // PlaylistCreatorPanel
@@ -540,14 +542,14 @@
             // BackcrButton
             // 
             this.BackcrButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackcrButton.ForeColor = System.Drawing.Color.Aqua;
+            this.BackcrButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BackcrButton.Location = new System.Drawing.Point(204, 175);
             this.BackcrButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackcrButton.Name = "BackcrButton";
             this.BackcrButton.Size = new System.Drawing.Size(88, 28);
             this.BackcrButton.TabIndex = 8;
-            this.BackcrButton.Text = "Back";
-            this.BackcrButton.UseVisualStyleBackColor = false;
+            this.BackcrButton.Text = "Atras";
+            this.BackcrButton.UseVisualStyleBackColor = true;
             this.BackcrButton.Click += new System.EventHandler(this.BackcrButton_Click);
             // 
             // PrivateCheckBox
@@ -563,11 +565,11 @@
             // SongplLabel
             // 
             this.SongplLabel.AutoSize = true;
-            this.SongplLabel.Location = new System.Drawing.Point(151, 82);
+            this.SongplLabel.Location = new System.Drawing.Point(155, 77);
             this.SongplLabel.Name = "SongplLabel";
-            this.SongplLabel.Size = new System.Drawing.Size(35, 13);
+            this.SongplLabel.Size = new System.Drawing.Size(49, 13);
             this.SongplLabel.TabIndex = 6;
-            this.SongplLabel.Text = "Song:";
+            this.SongplLabel.Text = "Cancion:";
             // 
             // SongsComboBox
             // 
@@ -581,23 +583,23 @@
             // PlaylistNameLabel
             // 
             this.PlaylistNameLabel.AutoSize = true;
-            this.PlaylistNameLabel.Location = new System.Drawing.Point(148, 38);
+            this.PlaylistNameLabel.Location = new System.Drawing.Point(155, 38);
             this.PlaylistNameLabel.Name = "PlaylistNameLabel";
-            this.PlaylistNameLabel.Size = new System.Drawing.Size(38, 13);
+            this.PlaylistNameLabel.Size = new System.Drawing.Size(47, 13);
             this.PlaylistNameLabel.TabIndex = 4;
-            this.PlaylistNameLabel.Text = "Name:";
+            this.PlaylistNameLabel.Text = "Nombre:";
             // 
             // CreatePlaylistButton
             // 
             this.CreatePlaylistButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.CreatePlaylistButton.ForeColor = System.Drawing.Color.Aqua;
+            this.CreatePlaylistButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CreatePlaylistButton.Location = new System.Drawing.Point(204, 134);
             this.CreatePlaylistButton.Margin = new System.Windows.Forms.Padding(2);
             this.CreatePlaylistButton.Name = "CreatePlaylistButton";
             this.CreatePlaylistButton.Size = new System.Drawing.Size(88, 28);
             this.CreatePlaylistButton.TabIndex = 2;
-            this.CreatePlaylistButton.Text = "Create";
-            this.CreatePlaylistButton.UseVisualStyleBackColor = false;
+            this.CreatePlaylistButton.Text = "Crear";
+            this.CreatePlaylistButton.UseVisualStyleBackColor = true;
             this.CreatePlaylistButton.Click += new System.EventHandler(this.CreatePlaylistButton_Click);
             // 
             // PlaylistNameTextBox
@@ -618,31 +620,32 @@
             this.DeleteSongPanel.Name = "DeleteSongPanel";
             this.DeleteSongPanel.Size = new System.Drawing.Size(439, 243);
             this.DeleteSongPanel.TabIndex = 9;
+            this.DeleteSongPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DeleteSongPanel_Paint);
             // 
             // DeleteBackButton
             // 
             this.DeleteBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.DeleteBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DeleteBackButton.Location = new System.Drawing.Point(154, 137);
             this.DeleteBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBackButton.Name = "DeleteBackButton";
             this.DeleteBackButton.Size = new System.Drawing.Size(88, 28);
             this.DeleteBackButton.TabIndex = 2;
-            this.DeleteBackButton.Text = "Back\r\n";
-            this.DeleteBackButton.UseVisualStyleBackColor = false;
+            this.DeleteBackButton.Text = "Atras";
+            this.DeleteBackButton.UseVisualStyleBackColor = true;
             this.DeleteBackButton.Click += new System.EventHandler(this.DeleteBackButton_Click);
             // 
             // ConfirmDeleteButton
             // 
             this.ConfirmDeleteButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ConfirmDeleteButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ConfirmDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ConfirmDeleteButton.Location = new System.Drawing.Point(154, 90);
             this.ConfirmDeleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmDeleteButton.Name = "ConfirmDeleteButton";
             this.ConfirmDeleteButton.Size = new System.Drawing.Size(88, 28);
             this.ConfirmDeleteButton.TabIndex = 1;
-            this.ConfirmDeleteButton.Text = "Delete";
-            this.ConfirmDeleteButton.UseVisualStyleBackColor = false;
+            this.ConfirmDeleteButton.Text = "Eliminar";
+            this.ConfirmDeleteButton.UseVisualStyleBackColor = true;
             this.ConfirmDeleteButton.Click += new System.EventHandler(this.ConfirmDeleteButton_Click);
             // 
             // DeleteSongComboBox
@@ -667,27 +670,27 @@
             // DeletePlaylistBackButton
             // 
             this.DeletePlaylistBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeletePlaylistBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.DeletePlaylistBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DeletePlaylistBackButton.Location = new System.Drawing.Point(154, 137);
             this.DeletePlaylistBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeletePlaylistBackButton.Name = "DeletePlaylistBackButton";
             this.DeletePlaylistBackButton.Size = new System.Drawing.Size(88, 28);
             this.DeletePlaylistBackButton.TabIndex = 2;
-            this.DeletePlaylistBackButton.Text = "Back\r\n";
-            this.DeletePlaylistBackButton.UseVisualStyleBackColor = false;
+            this.DeletePlaylistBackButton.Text = "Atras";
+            this.DeletePlaylistBackButton.UseVisualStyleBackColor = true;
             this.DeletePlaylistBackButton.Click += new System.EventHandler(this.DeletePlaylistBackButton_Click);
             // 
             // DefDeletePlaylistButton
             // 
             this.DefDeletePlaylistButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DefDeletePlaylistButton.ForeColor = System.Drawing.Color.Aqua;
+            this.DefDeletePlaylistButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DefDeletePlaylistButton.Location = new System.Drawing.Point(154, 90);
             this.DefDeletePlaylistButton.Margin = new System.Windows.Forms.Padding(2);
             this.DefDeletePlaylistButton.Name = "DefDeletePlaylistButton";
             this.DefDeletePlaylistButton.Size = new System.Drawing.Size(88, 28);
             this.DefDeletePlaylistButton.TabIndex = 1;
-            this.DefDeletePlaylistButton.Text = "Delete";
-            this.DefDeletePlaylistButton.UseVisualStyleBackColor = false;
+            this.DefDeletePlaylistButton.Text = "Eliminar";
+            this.DefDeletePlaylistButton.UseVisualStyleBackColor = true;
             this.DefDeletePlaylistButton.Click += new System.EventHandler(this.DefDeletePlaylistButton_Click);
             // 
             // DeletePlaylistComboBox
@@ -713,14 +716,14 @@
             // SelectButton
             // 
             this.SelectButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SelectButton.ForeColor = System.Drawing.Color.Aqua;
+            this.SelectButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SelectButton.Location = new System.Drawing.Point(154, 58);
             this.SelectButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectButton.Name = "SelectButton";
             this.SelectButton.Size = new System.Drawing.Size(88, 28);
             this.SelectButton.TabIndex = 5;
-            this.SelectButton.Text = "Select";
-            this.SelectButton.UseVisualStyleBackColor = false;
+            this.SelectButton.Text = "Seleccionar";
+            this.SelectButton.UseVisualStyleBackColor = true;
             this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // RPlaylistLabel
@@ -743,14 +746,14 @@
             // RSongBackButton
             // 
             this.RSongBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RSongBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.RSongBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RSongBackButton.Location = new System.Drawing.Point(154, 97);
             this.RSongBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.RSongBackButton.Name = "RSongBackButton";
             this.RSongBackButton.Size = new System.Drawing.Size(88, 28);
             this.RSongBackButton.TabIndex = 2;
-            this.RSongBackButton.Text = "Back\r\n";
-            this.RSongBackButton.UseVisualStyleBackColor = false;
+            this.RSongBackButton.Text = "Atras";
+            this.RSongBackButton.UseVisualStyleBackColor = true;
             this.RSongBackButton.Click += new System.EventHandler(this.RSongBackButton_Click);
             // 
             // FinalRemovePanel
@@ -768,24 +771,24 @@
             // SDeleteButton
             // 
             this.SDeleteButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SDeleteButton.ForeColor = System.Drawing.Color.Aqua;
+            this.SDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SDeleteButton.Location = new System.Drawing.Point(154, 58);
             this.SDeleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.SDeleteButton.Name = "SDeleteButton";
             this.SDeleteButton.Size = new System.Drawing.Size(88, 28);
             this.SDeleteButton.TabIndex = 5;
-            this.SDeleteButton.Text = "Delete";
-            this.SDeleteButton.UseVisualStyleBackColor = false;
+            this.SDeleteButton.Text = "Eliminar";
+            this.SDeleteButton.UseVisualStyleBackColor = true;
             this.SDeleteButton.Click += new System.EventHandler(this.SDeleteButton_Click);
             // 
             // SRLabel
             // 
             this.SRLabel.AutoSize = true;
-            this.SRLabel.Location = new System.Drawing.Point(84, 29);
+            this.SRLabel.Location = new System.Drawing.Point(87, 24);
             this.SRLabel.Name = "SRLabel";
-            this.SRLabel.Size = new System.Drawing.Size(35, 13);
+            this.SRLabel.Size = new System.Drawing.Size(49, 13);
             this.SRLabel.TabIndex = 4;
-            this.SRLabel.Text = "Song:";
+            this.SRLabel.Text = "Cancion:";
             // 
             // SRComboBox
             // 
@@ -798,14 +801,14 @@
             // SRRBackButton
             // 
             this.SRRBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SRRBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.SRRBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SRRBackButton.Location = new System.Drawing.Point(154, 97);
             this.SRRBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.SRRBackButton.Name = "SRRBackButton";
             this.SRRBackButton.Size = new System.Drawing.Size(88, 28);
             this.SRRBackButton.TabIndex = 2;
-            this.SRRBackButton.Text = "Back\r\n";
-            this.SRRBackButton.UseVisualStyleBackColor = false;
+            this.SRRBackButton.Text = "Atras";
+            this.SRRBackButton.UseVisualStyleBackColor = true;
             this.SRRBackButton.Click += new System.EventHandler(this.SRRBackButton_Click);
             // 
             // AddSongPanel
@@ -819,18 +822,19 @@
             this.AddSongPanel.Name = "AddSongPanel";
             this.AddSongPanel.Size = new System.Drawing.Size(439, 243);
             this.AddSongPanel.TabIndex = 12;
+            this.AddSongPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddSongPanel_Paint);
             // 
             // ASSelectButton
             // 
             this.ASSelectButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ASSelectButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ASSelectButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ASSelectButton.Location = new System.Drawing.Point(154, 58);
             this.ASSelectButton.Margin = new System.Windows.Forms.Padding(2);
             this.ASSelectButton.Name = "ASSelectButton";
             this.ASSelectButton.Size = new System.Drawing.Size(88, 28);
             this.ASSelectButton.TabIndex = 5;
-            this.ASSelectButton.Text = "Select";
-            this.ASSelectButton.UseVisualStyleBackColor = false;
+            this.ASSelectButton.Text = "Seleccionar";
+            this.ASSelectButton.UseVisualStyleBackColor = true;
             this.ASSelectButton.Click += new System.EventHandler(this.ASSelectButton_Click);
             // 
             // label1
@@ -853,14 +857,14 @@
             // ASBackButton
             // 
             this.ASBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ASBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ASBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ASBackButton.Location = new System.Drawing.Point(154, 97);
             this.ASBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.ASBackButton.Name = "ASBackButton";
             this.ASBackButton.Size = new System.Drawing.Size(88, 28);
             this.ASBackButton.TabIndex = 2;
-            this.ASBackButton.Text = "Back\r\n";
-            this.ASBackButton.UseVisualStyleBackColor = false;
+            this.ASBackButton.Text = "Atras";
+            this.ASBackButton.UseVisualStyleBackColor = true;
             this.ASBackButton.Click += new System.EventHandler(this.ASBackButton_Click);
             // 
             // FinalAddSongPanel
@@ -878,14 +882,14 @@
             // ASSButton
             // 
             this.ASSButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ASSButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ASSButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ASSButton.Location = new System.Drawing.Point(154, 58);
             this.ASSButton.Margin = new System.Windows.Forms.Padding(2);
             this.ASSButton.Name = "ASSButton";
             this.ASSButton.Size = new System.Drawing.Size(88, 28);
             this.ASSButton.TabIndex = 5;
-            this.ASSButton.Text = "Add";
-            this.ASSButton.UseVisualStyleBackColor = false;
+            this.ASSButton.Text = "Agregar";
+            this.ASSButton.UseVisualStyleBackColor = true;
             this.ASSButton.Click += new System.EventHandler(this.ASSButton_Click);
             // 
             // label2
@@ -893,9 +897,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(84, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Song:";
+            this.label2.Text = "Cancion:";
             // 
             // ASSComboBox
             // 
@@ -908,14 +912,14 @@
             // ASSBackButton
             // 
             this.ASSBackButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ASSBackButton.ForeColor = System.Drawing.Color.Aqua;
+            this.ASSBackButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ASSBackButton.Location = new System.Drawing.Point(154, 97);
             this.ASSBackButton.Margin = new System.Windows.Forms.Padding(2);
             this.ASSBackButton.Name = "ASSBackButton";
             this.ASSBackButton.Size = new System.Drawing.Size(88, 28);
             this.ASSBackButton.TabIndex = 2;
-            this.ASSBackButton.Text = "Back\r\n";
-            this.ASSBackButton.UseVisualStyleBackColor = false;
+            this.ASSBackButton.Text = "Atras";
+            this.ASSBackButton.UseVisualStyleBackColor = true;
             this.ASSBackButton.Click += new System.EventHandler(this.ASSBackButton_Click);
             // 
             // SongMenuForm
@@ -935,6 +939,7 @@
             this.Controls.Add(this.PlaylistsFlowLayoutPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ROPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SongMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Canciones";
@@ -1017,7 +1022,6 @@
         private System.Windows.Forms.Button DeletePlaylistButton;
         private System.Windows.Forms.Panel DeletePlaylistPanel;
         private System.Windows.Forms.Button DeletePlaylistBackButton;
-        private System.Windows.Forms.Button DefDeletePlaylistButton;
         private System.Windows.Forms.ComboBox DeletePlaylistComboBox;
         private System.Windows.Forms.Button AddSongPlaylist;
         private System.Windows.Forms.Button RemoveSongButton;
@@ -1041,5 +1045,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ASSComboBox;
         private System.Windows.Forms.Button ASSBackButton;
+        private System.Windows.Forms.Button DefDeletePlaylistButton;
     }
 }

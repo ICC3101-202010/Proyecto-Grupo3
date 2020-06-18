@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeUserDataForm));
             this.label1 = new System.Windows.Forms.Label();
             this.MailBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -210,6 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MailBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChangeUserDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

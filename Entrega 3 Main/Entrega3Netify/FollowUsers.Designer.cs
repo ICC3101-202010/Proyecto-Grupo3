@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FollowUsers));
             this.FollowedUsersListView = new System.Windows.Forms.ListView();
             this.followSelected = new System.Windows.Forms.Button();
             this.unfollowSelected = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@
             this.Controls.Add(this.unfollowSelected);
             this.Controls.Add(this.followSelected);
             this.Controls.Add(this.FollowedUsersListView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FollowUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

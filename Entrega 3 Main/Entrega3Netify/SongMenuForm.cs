@@ -60,11 +60,7 @@ namespace Entrega3Netify
             Button dynamicButton = new Button();
             dynamicButton.Height = 30;
 
-            dynamicButton.Width = 100;
-
-            dynamicButton.BackColor = Color.Black;
-
-            dynamicButton.ForeColor = Color.Aqua;
+            dynamicButton.Width = 88;
 
             dynamicButton.Location = new Point(3, y);
 
@@ -84,11 +80,7 @@ namespace Entrega3Netify
             Button dynamicButtonpl = new Button();
             dynamicButtonpl.Height = 30;
 
-            dynamicButtonpl.Width = 100;
-
-            dynamicButtonpl.BackColor = Color.Black;
-
-            dynamicButtonpl.ForeColor = Color.Aqua;
+            dynamicButtonpl.Width = 88;
 
             dynamicButtonpl.Location = new Point(3, y);
 
@@ -152,9 +144,9 @@ namespace Entrega3Netify
                 SongsComboBox.Items.Add(s.Name);
                 y += 69;
             }
-            CreateDynamicButtonpl(y2, "Favorites", "Favorites", CurrentUser.FavoriteSongs);
+            CreateDynamicButtonpl(y2, "Favoritos", "Favoritos", CurrentUser.FavoriteSongs);
             y2 += 69;
-            CreateDynamicButtonpl(y2, "Every Song", "Every Song", def);
+            CreateDynamicButtonpl(y2, "Lista Canciones", "Lista Canciones", def);
             y2 += 69;
             foreach (SongPlaylist playlist in currentUser.CancionesPrivadas)
             {
@@ -576,7 +568,7 @@ namespace Entrega3Netify
             RPlaylistComboBox.Items.Clear();
             stackpanels.Add(panels["RemoveFromPLPanel"]);
             ShowLastPanel();
-            RPlaylistComboBox.Items.Add("Favorites");
+            RPlaylistComboBox.Items.Add("Favoritos");
             foreach(SongPlaylist pl in CurrentUser.CancionesPrivadas) 
             {
                 RPlaylistComboBox.Items.Add(pl.Name);
@@ -599,7 +591,7 @@ namespace Entrega3Netify
             SRComboBox.Items.Clear();
             stackpanels.Add(panels["FinalRemovePanel"]);
             ShowLastPanel();
-            if (RPlaylistComboBox.SelectedItem.ToString() == "Favorites")
+            if (RPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
             {
                 if (CurrentUser.FavoriteSongs != null)
                 {
@@ -644,7 +636,7 @@ namespace Entrega3Netify
 
         private void SDeleteButton_Click(object sender, EventArgs e)
         {
-            if (RPlaylistComboBox.SelectedItem.ToString() == "Favorites")
+            if (RPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
             {
                 if (CurrentUser.FavoriteSongs != null)
                 {
@@ -710,7 +702,7 @@ namespace Entrega3Netify
             ASPlaylistComboBox.Items.Clear();
             stackpanels.Add(panels["AddSongPanel"]);
             ShowLastPanel();
-            ASPlaylistComboBox.Items.Add("Favorites");
+            ASPlaylistComboBox.Items.Add("Favoritos");
             foreach (SongPlaylist pl in CurrentUser.CancionesPrivadas)
             {
                 ASPlaylistComboBox.Items.Add(pl.Name);
@@ -729,7 +721,7 @@ namespace Entrega3Netify
 
         private void ASSButton_Click(object sender, EventArgs e)
         {
-            if (ASPlaylistComboBox.SelectedItem.ToString() == "Favorites")
+            if (ASPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
             {
                 foreach (Song s in def)
                 {
@@ -797,6 +789,16 @@ namespace Entrega3Netify
             {
                 ASSComboBox.Items.Add(s.Name);
             }
+        }
+
+        private void AddSongPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DeleteSongPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void CreatePlaylistButton_Click(object sender, EventArgs e)
