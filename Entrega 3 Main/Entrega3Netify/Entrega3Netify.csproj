@@ -69,6 +69,13 @@
     <Compile Include="ChangeUserDataForm.Designer.cs">
       <DependentUpon>ChangeUserDataForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Circle.cs" />
+    <Compile Include="Extras Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras Form.Designer.cs">
+      <DependentUpon>Extras Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="FollowActors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +94,12 @@
     <Compile Include="FollowUsers.Designer.cs">
       <DependentUpon>FollowUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestor.cs" />
     <Compile Include="ImageMenu.cs">
       <SubType>Form</SubType>
@@ -100,6 +113,7 @@
     <Compile Include="ImageViewer.Designer.cs">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Input.cs" />
     <Compile Include="LoginChallenge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +145,7 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SearcherPlayerEventArgs.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Singer.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="SongsController.cs" />
@@ -157,6 +172,9 @@
     <EmbeddedResource Include="ChangeUserDataForm.resx">
       <DependentUpon>ChangeUserDataForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Extras Form.resx">
+      <DependentUpon>Extras Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FollowActors.resx">
       <DependentUpon>FollowActors.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FollowUsers.resx">
       <DependentUpon>FollowUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageMenu.resx">
       <DependentUpon>ImageMenu.cs</DependentUpon>

@@ -80,5 +80,16 @@ namespace Entrega3Netify
             SongsController songscontroller = new SongsController(songMenu);
             songMenu.Show();
         }
+
+        private void MainLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExtrasForm extras = new ExtrasForm();
+            extras.Show();
+        }
     }
 }
