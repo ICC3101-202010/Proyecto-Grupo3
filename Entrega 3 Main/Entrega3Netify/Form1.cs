@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entrega3Netify;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,10 +10,12 @@ namespace Snake
     {
         private List<Circle> Snake = new List<Circle>();
         private Circle food = new Circle();
+        ExtrasForm extras;
 
-        public Form1()
+        public Form1(ExtrasForm extras)
         {
             InitializeComponent();
+            this.extras = extras;
 
             //Set settings to default
             new Settings();
@@ -221,6 +224,12 @@ namespace Snake
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Salirbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            extras.Show();
         }
     }
 }

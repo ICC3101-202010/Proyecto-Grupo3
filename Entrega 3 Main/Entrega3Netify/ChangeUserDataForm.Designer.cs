@@ -196,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 289);
+            this.ClientSize = new System.Drawing.Size(464, 295);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.CommitChangesButton);
             this.Controls.Add(this.PremiumCheck);
@@ -211,8 +211,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.MailBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChangeUserDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Usuario";

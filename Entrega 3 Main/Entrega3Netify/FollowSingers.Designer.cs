@@ -88,11 +88,15 @@
             this.Controls.Add(this.unfollowButton);
             this.Controls.Add(this.followButton);
             this.Controls.Add(this.followSingersView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FollowSingers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguir Cantantes";
+            this.Load += new System.EventHandler(this.FollowSingers_Load);
             this.ResumeLayout(false);
 
         }

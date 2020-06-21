@@ -88,11 +88,15 @@
             this.Controls.Add(this.unfollowActor);
             this.Controls.Add(this.followActor);
             this.Controls.Add(this.followedActorsView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FollowActors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguir Actores";
+            this.Load += new System.EventHandler(this.FollowActors_Load);
             this.ResumeLayout(false);
 
         }

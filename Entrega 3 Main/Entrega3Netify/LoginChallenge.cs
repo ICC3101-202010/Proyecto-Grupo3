@@ -16,11 +16,13 @@ namespace Entrega3Netify
         public List<NPerson> users;
         public string candMail;
         public string candPassword;
+        MainMenu main;
 
-        public LoginChallenge(List<NPerson> users)
+        public LoginChallenge(List<NPerson> users, MainMenu main)
         {
             InitializeComponent();
             this.users = users;
+            this.main = main;
         }
 
 
@@ -54,8 +56,8 @@ namespace Entrega3Netify
                     // QUE ESTA ENTRANDO AL SIST.)
 
 
-                    MainLoginForm mainLogin = new MainLoginForm(users, users[i]);
-                    mainLogin.ShowDialog();
+                    MainLoginForm mainLogin = new MainLoginForm(users, users[i], main);
+                    mainLogin.Show();
                     this.Close();
                     return;
                 }
@@ -63,7 +65,6 @@ namespace Entrega3Netify
 
 
             MessageBox.Show("Login incorrecto, intente de nuevo.");
-            return; 
 
 
 
@@ -74,6 +75,7 @@ namespace Entrega3Netify
         private void CancelLoginButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            main.Show();
         }
 
 

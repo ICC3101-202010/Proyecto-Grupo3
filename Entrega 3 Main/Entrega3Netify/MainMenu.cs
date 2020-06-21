@@ -18,22 +18,24 @@ namespace Entrega3Netify
         public MainMenu(List<NPerson> users)
         {
             InitializeComponent();
-            this.users = users; 
+            this.users = users;
         }
 
         //Click opcion registrarse. 
         private void MenuRegisterButton_Click(object sender, EventArgs e)
         {
-            RegisterForm regForm = new RegisterForm(users);
+            RegisterForm regForm = new RegisterForm(users, this);
             regForm.Show();
+            this.Hide();
         }
 
         //Click opcion login. 
         private void MenuLoginButton_Click(object sender, EventArgs e)
         {
             //Si hago click, me abre un forms de login. 
-            LoginChallenge loginChallenge = new LoginChallenge(users);
+            LoginChallenge loginChallenge = new LoginChallenge(users,this);
             loginChallenge.Show();
+            this.Hide();
 
         }
 

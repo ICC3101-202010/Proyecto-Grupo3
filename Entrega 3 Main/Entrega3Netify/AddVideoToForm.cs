@@ -15,23 +15,27 @@ namespace Entrega3Netify
         List<NPerson> Users;
         NPerson Current;
         Video Video;
+        VideoMenuForm videoform;
 
-        public AddVideoToForm(List<NPerson> users, NPerson current, Video video)
+        public AddVideoToForm(List<NPerson> users, NPerson current, Video video, VideoMenuForm videoform)
         {
             InitializeComponent();
             this.Users = users;
             this.Current = current;
             this.Video = video;
+            this.videoform = videoform;
         }
 
         private void atrasbtn2_Click(object sender, EventArgs e)
         {
             this.Close();
+            videoform.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            videoform.Show();
         }
 
         private void newplstbtn_Click(object sender, EventArgs e)
@@ -84,12 +88,14 @@ namespace Entrega3Netify
                 Gestor.SaveVideoOnPlaylistAndUser(Users, Current, Video, textnombreplst , check);
                 MessageBox.Show("Playlist creada exitosamente");
                 this.Close();
+                videoform.Show();
             }
             else if (comboBox1.Text.Count() != 0)
             {
                 Gestor.CreateSaveVideoOnPlaylistAndUser(Users, Current, Video, combonombreplst);
                 MessageBox.Show("Video agregado exitosamente");
                 this.Close();
+                videoform.Show();
             }
         }
 

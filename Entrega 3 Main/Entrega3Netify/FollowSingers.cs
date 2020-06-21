@@ -15,14 +15,16 @@ namespace Entrega3Netify
         NPerson currentUser;
         List<Singer> singerList;
         MatrizSeguirCantantes mainMatrix;
+        MainLoginForm mainlog;
 
-        public FollowSingers(NPerson _currentUser, List<Singer> _singerList)
+        public FollowSingers(NPerson _currentUser, List<Singer> _singerList, MainLoginForm mainlog)
         {
             InitializeComponent();
 
             this.currentUser = _currentUser;
             this.singerList = _singerList;
             this.mainMatrix = new MatrizSeguirCantantes();
+            this.mainlog = mainlog;
 
 
             followSingersView.View = View.Details;
@@ -67,15 +69,22 @@ namespace Entrega3Netify
 
         private void followButton_Click(object sender, EventArgs e)
         {
-            String index = followSingersView.SelectedItems[0].Text;
+            try
+            {
 
-            followSingersView.SelectedItems[0].SubItems[3].Text = "Seguido";
+                String index = followSingersView.SelectedItems[0].Text;
+                followSingersView.SelectedItems[0].SubItems[3].Text = "Seguido";
 
-            //Debug.WriteLine("Seguidos:");
-            //Debug.WriteLine(index);
+                //Debug.WriteLine("Seguidos:");
+                //Debug.WriteLine(index);
 
-            int followedIndex = Convert.ToInt32(index);
-            mainMatrix.seguirCantante(currentUser.IDUser, followedIndex);
+                int followedIndex = Convert.ToInt32(index);
+                mainMatrix.seguirCantante(currentUser.IDUser, followedIndex);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor seleccione un cantante.");
+            }
         }
 
         private void unfollowButton_Click(object sender, EventArgs e)
@@ -92,9 +101,15 @@ namespace Entrega3Netify
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            mainlog.Show();
         }
 
         private void followSingersView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FollowSingers_Load(object sender, EventArgs e)
         {
 
         }

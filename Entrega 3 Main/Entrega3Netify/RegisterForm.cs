@@ -31,7 +31,9 @@ namespace Entrega3Netify
 
 
         public List<NPerson> users;
-        public RegisterForm(List<NPerson> users)
+        MainMenu main;
+        public RegisterForm(List<NPerson> users, MainMenu main
+            )
         {
             InitializeComponent();
             this.users = users ;
@@ -40,6 +42,7 @@ namespace Entrega3Netify
             this.regName = "";
             this.regLastName = "";
             this.regDescription = "";
+            this.main = main;
    
         }
 
@@ -103,6 +106,7 @@ namespace Entrega3Netify
         private void cancelRegisterButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            main.Show();
         }
 
 
@@ -175,7 +179,9 @@ namespace Entrega3Netify
                 formatter.Serialize(stream, users);
                 stream.Close();
 
+                MessageBox.Show("Se registro con exito");
                 this.Close();
+                main.Show();
             }
         }
         //OMITIR ESTO. 

@@ -36,6 +36,7 @@
             // 
             // MenuRegisterButton
             // 
+            this.MenuRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuRegisterButton.Location = new System.Drawing.Point(145, 18);
             this.MenuRegisterButton.Margin = new System.Windows.Forms.Padding(2);
             this.MenuRegisterButton.Name = "MenuRegisterButton";
@@ -47,17 +48,19 @@
             // 
             // MenuLoginButton
             // 
+            this.MenuLoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuLoginButton.Location = new System.Drawing.Point(145, 99);
             this.MenuLoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.MenuLoginButton.Name = "MenuLoginButton";
             this.MenuLoginButton.Size = new System.Drawing.Size(125, 66);
             this.MenuLoginButton.TabIndex = 1;
-            this.MenuLoginButton.Text = "Login";
+            this.MenuLoginButton.Text = "Iniciar Sesión";
             this.MenuLoginButton.UseVisualStyleBackColor = true;
             this.MenuLoginButton.Click += new System.EventHandler(this.MenuLoginButton_Click);
             // 
             // MenuExitButton
             // 
+            this.MenuExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuExitButton.Location = new System.Drawing.Point(145, 180);
             this.MenuExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.MenuExitButton.Name = "MenuExitButton";
@@ -75,8 +78,11 @@
             this.Controls.Add(this.MenuExitButton);
             this.Controls.Add(this.MenuLoginButton);
             this.Controls.Add(this.MenuRegisterButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Netify";

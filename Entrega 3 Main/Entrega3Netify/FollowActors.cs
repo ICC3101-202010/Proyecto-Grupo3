@@ -16,15 +16,17 @@ namespace Entrega3Netify
         NPerson currentUser;
         List<Actor> actorList;
         MatrizSeguirActores mainMatrix;
+        MainLoginForm mainlog;
 
 
-        public FollowActors(NPerson _currentUser, List<Actor> _actorList)
+        public FollowActors(NPerson _currentUser, List<Actor> _actorList, MainLoginForm mainlog)
         {
             InitializeComponent();
 
             this.currentUser = _currentUser;
             this.actorList = _actorList;
             this.mainMatrix = new MatrizSeguirActores();
+            this.mainlog = mainlog;
 
 
             followedActorsView.View = View.Details;
@@ -74,15 +76,23 @@ namespace Entrega3Netify
 
         private void followActor_Click(object sender, EventArgs e)
         {
-            String index = followedActorsView.SelectedItems[0].Text;
+            try
+            {
 
-            followedActorsView.SelectedItems[0].SubItems[3].Text = "Seguido";
+                String index = followedActorsView.SelectedItems[0].Text;
 
-            //Debug.WriteLine("Seguidos:");
-            //Debug.WriteLine(index);
+                followedActorsView.SelectedItems[0].SubItems[3].Text = "Seguido";
 
-            int followedIndex = Convert.ToInt32(index);
-            mainMatrix.seguirActor(currentUser.IDUser, followedIndex);
+                //Debug.WriteLine("Seguidos:");
+                //Debug.WriteLine(index);
+
+                int followedIndex = Convert.ToInt32(index);
+                mainMatrix.seguirActor(currentUser.IDUser, followedIndex);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor, seleccione un actor.");
+            }
         }
 
         private void unfollowActor_Click(object sender, EventArgs e)
@@ -99,6 +109,12 @@ namespace Entrega3Netify
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            mainlog.Show();
+        }
+
+        private void FollowActors_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

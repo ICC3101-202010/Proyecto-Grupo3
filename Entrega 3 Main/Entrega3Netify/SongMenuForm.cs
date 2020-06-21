@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Diagnostics;
 
 namespace Entrega3Netify
 {
@@ -18,6 +19,9 @@ namespace Entrega3Netify
         int butonpos = 0 , buton2pos = 0;
         bool privlist = false;
         List<Song> nplaylist = new List<Song>();
+        MainLoginForm mainlog;
+
+
         public NPerson CurrentUser { get; set; }
         List<NPerson> Users;
         List<Panel> stackpanels = new List<Panel>();        Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
@@ -106,9 +110,10 @@ namespace Entrega3Netify
             }
         }
 
-        public SongMenuForm(List<NPerson> users,NPerson currentUser)
+        public SongMenuForm(List<NPerson> users,NPerson currentUser, MainLoginForm mainlog)
         {
             InitializeComponent();
+            this.mainlog = mainlog;
             panels.Add("SSFLPanel", SSFLPanel);
             panels.Add("ImportSongPanel", ImportSongPanel);
             panels.Add("PlaylistCreatorPanel",PlaylistCreatorPanel);
@@ -327,6 +332,41 @@ namespace Entrega3Netify
                 {
                     Song impsong = new Song(NameTextBox.Text, AlbumTextBox.Text, ArtistTextBox.Text, GenreTextBox.Text, YearTextBox.Text, ext);
                     Gestor.SaveSongOnUser(Users, CurrentUser, NameTextBox.Text, AlbumTextBox.Text, ArtistTextBox.Text, GenreTextBox.Text, YearTextBox.Text, ext);
+
+                    //MODIFICACIONES M.S
+                    List<Singer> singers = Gestor.SingersLoad();
+                    int singerID = singers.Count() + 1;
+
+                    string[] words = ArtistTextBox.Text.Split(' ');
+
+                    string name = ""; string lastName = ""; 
+
+                    if (words[0] != null)
+                    {
+                         name = words[0];
+                    }
+                    if (words[1] != null)
+                    {
+                         lastName = words[1];
+                    }
+                    if (words[1] == null)
+                    {
+                         lastName = "";
+                    }
+
+                    Singer newArtist = new Singer(singerID, name, lastName, "", "", "",false, false);
+                    singers.Add(newArtist);
+                    Gestor.SingersSave(singers);
+
+                    for (int i = 0; i < singers.Count(); i++)
+                    {
+                        Debug.WriteLine(singers[i].IDUser);
+                        Debug.WriteLine(singers[i].Name);
+                    }
+
+
+
+
                     CreateDynamicButton(butonpos, NameTextBox.Text + "-" + AlbumTextBox.Text + "-" + ArtistTextBox.Text, NameTextBox.Text + "Button", impsong);
                     butonpos += 69;
                     OnImportedButtonClicked(impsong);
@@ -352,6 +392,40 @@ namespace Entrega3Netify
                     Stream stream = new FileStream("Songs.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
                     formatter.Serialize(stream, def);
                     stream.Close();
+
+                    //MODIFICACIONES M.S
+                    List<Singer> singers = Gestor.SingersLoad();
+                    int singerID = singers.Count() + 1;
+
+                    string[] words = ArtistTextBox.Text.Split(' ');
+
+                    string name = ""; string lastName = "";
+
+                    if (words[0] != null)
+                    {
+                        name = words[0];
+                    }
+                    if (words[1] != null)
+                    {
+                        lastName = words[1];
+                    }
+                    if (words[1] == null)
+                    {
+                        lastName = "";
+                    }
+
+                    Singer newArtist = new Singer(singerID, name, lastName, "", "", "", false, false);
+                    singers.Add(newArtist);
+                    Gestor.SingersSave(singers);
+
+                    for (int i = 0; i < singers.Count(); i++)
+                    {
+                        Debug.WriteLine(singers[i].IDUser);
+                        Debug.WriteLine(singers[i].Name);
+                    }
+
+
+
                 }
                 catch (System.IO.FileNotFoundException) 
                 {
@@ -721,63 +795,70 @@ namespace Entrega3Netify
 
         private void ASSButton_Click(object sender, EventArgs e)
         {
-            if (ASPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
+            if (ASPlaylistComboBox.SelectedItem == null)
             {
-                foreach (Song s in def)
-                {
-                    if (ASSComboBox.SelectedItem.ToString() == s.Name)
-                    {
-                        if (CurrentUser.FavoriteSongs != null)
-                        {
-                            CurrentUser.FavoriteSongs.Add(s);
-                        }
-                        else
-                        {
-                            CurrentUser.FavoriteSongs = new List<Song>();
-                            CurrentUser.FavoriteSongs.Add(s);
-                        }
-                        Gestor.SaveFavoriteUser(Users, CurrentUser);
-                    }
-                }
+                MessageBox.Show("Porfavor seleccione una cancion.");
             }
             else
             {
-                foreach (SongPlaylist pl in CurrentUser.CancionesPrivadas)
+                if (ASPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
                 {
-                    if (pl.Name == ASPlaylistComboBox.SelectedItem.ToString())
+                    foreach (Song s in def)
                     {
-                        foreach (Song s in def)
+                        if (ASSComboBox.SelectedItem.ToString() == s.Name)
                         {
-                            if (ASSComboBox.SelectedItem.ToString() == s.Name)
+                            if (CurrentUser.FavoriteSongs != null)
                             {
-                                pl.ActualPlaylist.Add(s);
-                                Gestor.SaveFavoriteUser(Users, CurrentUser);
-                                break;
+                                CurrentUser.FavoriteSongs.Add(s);
                             }
+                            else
+                            {
+                                CurrentUser.FavoriteSongs = new List<Song>();
+                                CurrentUser.FavoriteSongs.Add(s);
+                            }
+                            Gestor.SaveFavoriteUser(Users, CurrentUser);
                         }
-                        break;
                     }
                 }
-                foreach (SongPlaylist pl in CurrentUser.CancionesPublicas)
+                else
                 {
-                    if (pl.Name == ASPlaylistComboBox.SelectedItem.ToString())
+                    foreach (SongPlaylist pl in CurrentUser.CancionesPrivadas)
                     {
-                        foreach (Song s in def)
+                        if (pl.Name == ASPlaylistComboBox.SelectedItem.ToString())
                         {
-                            if (ASSComboBox.SelectedItem.ToString() == s.Name)
+                            foreach (Song s in def)
                             {
-                                pl.ActualPlaylist.Add(s);
-                                Gestor.SaveFavoriteUser(Users, CurrentUser);
-                                break;
+                                if (ASSComboBox.SelectedItem.ToString() == s.Name)
+                                {
+                                    pl.ActualPlaylist.Add(s);
+                                    Gestor.SaveFavoriteUser(Users, CurrentUser);
+                                    break;
+                                }
                             }
+                            break;
                         }
-                        break;
+                    }
+                    foreach (SongPlaylist pl in CurrentUser.CancionesPublicas)
+                    {
+                        if (pl.Name == ASPlaylistComboBox.SelectedItem.ToString())
+                        {
+                            foreach (Song s in def)
+                            {
+                                if (ASSComboBox.SelectedItem.ToString() == s.Name)
+                                {
+                                    pl.ActualPlaylist.Add(s);
+                                    Gestor.SaveFavoriteUser(Users, CurrentUser);
+                                    break;
+                                }
+                            }
+                            break;
+                        }
                     }
                 }
+                stackpanels.RemoveAt(stackpanels.Count - 1);
+                stackpanels.RemoveAt(stackpanels.Count - 1);
+                ShowLastPanel();
             }
-            stackpanels.RemoveAt(stackpanels.Count - 1);
-            stackpanels.RemoveAt(stackpanels.Count - 1);
-            ShowLastPanel();
         }
 
         private void ASSelectButton_Click(object sender, EventArgs e)
@@ -801,13 +882,22 @@ namespace Entrega3Netify
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainlog.Show();
+        }
+
         private void CreatePlaylistButton_Click(object sender, EventArgs e)
         {
             Gestor.SaveSongOnPlaylistAndUser(Users,CurrentUser,nplaylist,PlaylistNameTextBox.Text,privlist);
             nplaylist.Clear();
             PlaylistNameTextBox.Clear();
             PrivateCheckBox.Checked = false;
-            MessageBox.Show("Playlist creada, cierre la pestaña y vuelva al menu de canciones para disfrutar de su playlist");
+            this.Close();
+            SongMenuForm songMenu = new SongMenuForm(Users, CurrentUser, mainlog);
+            SongsController songscontroller = new SongsController(songMenu);
+            songMenu.Show();
         }
     }
 }

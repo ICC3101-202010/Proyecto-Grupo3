@@ -63,6 +63,12 @@
     <Compile Include="AddVideoToForm.Designer.cs">
       <DependentUpon>AddVideoToForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeUserDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     <Compile Include="VideoPlaylist.cs" />
     <EmbeddedResource Include="AddVideoToForm.resx">
       <DependentUpon>AddVideoToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeUserDataForm.resx">
       <DependentUpon>ChangeUserDataForm.cs</DependentUpon>

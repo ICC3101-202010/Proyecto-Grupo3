@@ -17,13 +17,15 @@ namespace Entrega3Netify
         NPerson currentUser; 
         List<NPerson> userList;
         MatrizSeguidores mainMatrix;
+        MainLoginForm mainlog;
 
-        public FollowUsers(List<NPerson> _userList, NPerson _currentUser)
+        public FollowUsers(List<NPerson> _userList, NPerson _currentUser, MainLoginForm mainlog)
         {
             InitializeComponent();
             this.mainMatrix  = new MatrizSeguidores();
             this.currentUser = _currentUser;
             this.userList = _userList;
+            this.mainlog = mainlog;
 
             FollowedUsersListView.View = View.Details; 
             FollowedUsersListView.Columns.Add("ID Usuario.");
@@ -67,17 +69,25 @@ namespace Entrega3Netify
 
         private void followSelected_Click(object sender, EventArgs e)
         {
-            String index = FollowedUsersListView.SelectedItems[0].Text;
+            try
+            {
+                String index = FollowedUsersListView.SelectedItems[0].Text;
 
-            FollowedUsersListView.SelectedItems[0].SubItems[3].Text = "Seguido";
+                FollowedUsersListView.SelectedItems[0].SubItems[3].Text = "Seguido";
 
-            //Debug.WriteLine("Seguidos:");
-            //Debug.WriteLine(index);
+                //Debug.WriteLine("Seguidos:");
+                //Debug.WriteLine(index);
 
-            int followedIndex = Convert.ToInt32(index);
-            mainMatrix.seguirUsuario(currentUser.IDUser, followedIndex);
+                int followedIndex = Convert.ToInt32(index);
+                mainMatrix.seguirUsuario(currentUser.IDUser, followedIndex);
 
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor seleccione un usuario.");
+            }
+            
 
 
 
@@ -101,6 +111,7 @@ namespace Entrega3Netify
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            mainlog.Show();
         }
 
 

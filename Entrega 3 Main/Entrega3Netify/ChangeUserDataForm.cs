@@ -14,14 +14,16 @@ namespace Entrega3Netify
     {
         //Heredo usuario actual del login. 
         public NPerson currentUser;
-        public List<NPerson> users; 
+        public List<NPerson> users;
+        MainLoginForm mainlog;
 
 
-        public ChangeUserDataForm(List<NPerson> users, NPerson currentUser)
+        public ChangeUserDataForm(List<NPerson> users, NPerson currentUser, MainLoginForm mainlog)
         {
             InitializeComponent();
             this.currentUser = currentUser;
             this.users = users;
+            this.mainlog = mainlog;
 
             //Fijo los textBox para que muestren parametros actuales del usuario
 
@@ -119,11 +121,13 @@ namespace Entrega3Netify
 
 
             this.Close();
+            mainlog.Show();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            mainlog.Show();
         }
 
         public void UsersSave(List<NPerson> UsersList)

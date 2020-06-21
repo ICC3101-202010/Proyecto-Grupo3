@@ -103,6 +103,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ASSComboBox = new System.Windows.Forms.ComboBox();
             this.ASSBackButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.ROPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeTrackBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -121,6 +122,7 @@
             // 
             // ROPanel
             // 
+            this.ROPanel.Controls.Add(this.button1);
             this.ROPanel.Controls.Add(this.DeleteSongButton);
             this.ROPanel.Controls.Add(this.UploadSongButton);
             this.ROPanel.Controls.Add(this.VolLabel);
@@ -141,12 +143,12 @@
             // DeleteSongButton
             // 
             this.DeleteSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DeleteSongButton.Location = new System.Drawing.Point(2, 49);
+            this.DeleteSongButton.Location = new System.Drawing.Point(12, 47);
             this.DeleteSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteSongButton.Name = "DeleteSongButton";
-            this.DeleteSongButton.Size = new System.Drawing.Size(142, 30);
+            this.DeleteSongButton.Size = new System.Drawing.Size(119, 30);
             this.DeleteSongButton.TabIndex = 9;
             this.DeleteSongButton.Text = "Eliminar Cancion\r\n";
             this.DeleteSongButton.UseVisualStyleBackColor = true;
@@ -155,12 +157,12 @@
             // UploadSongButton
             // 
             this.UploadSongButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UploadSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadSongButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UploadSongButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.UploadSongButton.Location = new System.Drawing.Point(476, 49);
+            this.UploadSongButton.Location = new System.Drawing.Point(509, 11);
             this.UploadSongButton.Margin = new System.Windows.Forms.Padding(2);
             this.UploadSongButton.Name = "UploadSongButton";
-            this.UploadSongButton.Size = new System.Drawing.Size(142, 30);
+            this.UploadSongButton.Size = new System.Drawing.Size(119, 30);
             this.UploadSongButton.TabIndex = 8;
             this.UploadSongButton.Text = "Importar Cancion";
             this.UploadSongButton.UseVisualStyleBackColor = true;
@@ -190,7 +192,7 @@
             // SongTimeLabel
             // 
             this.SongTimeLabel.AutoSize = true;
-            this.SongTimeLabel.Location = new System.Drawing.Point(491, 11);
+            this.SongTimeLabel.Location = new System.Drawing.Point(470, 11);
             this.SongTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SongTimeLabel.Name = "SongTimeLabel";
             this.SongTimeLabel.Size = new System.Drawing.Size(28, 13);
@@ -922,6 +924,20 @@
             this.ASSBackButton.UseVisualStyleBackColor = true;
             this.ASSBackButton.Click += new System.EventHandler(this.ASSBackButton_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(509, 47);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SongMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -939,7 +955,10 @@
             this.Controls.Add(this.PlaylistsFlowLayoutPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ROPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SongMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Canciones";
@@ -1046,5 +1065,6 @@
         private System.Windows.Forms.ComboBox ASSComboBox;
         private System.Windows.Forms.Button ASSBackButton;
         private System.Windows.Forms.Button DefDeletePlaylistButton;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -19,11 +19,14 @@ namespace Entrega3Netify
     {
         NPerson CurrentUser;
         List<NPerson> Users;
-        public VideoMenuForm(List<NPerson> users, NPerson currentUser)
+        MainLoginForm main;
+        
+        public VideoMenuForm(List<NPerson> users, NPerson currentUser, MainLoginForm main)
         {
             InitializeComponent();
             CurrentUser = currentUser;
             Users = users;
+            this.main = main;
         }
 
         private void VideoMenuForm_Load(object sender, EventArgs e)
@@ -34,6 +37,7 @@ namespace Entrega3Netify
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
+            main.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -245,8 +249,9 @@ namespace Entrega3Netify
                 {
                     if (video.name == name)
                     {
-                        AddVideoToForm add = new AddVideoToForm(Users,CurrentUser, video);
+                        AddVideoToForm add = new AddVideoToForm(Users,CurrentUser, video, this);
                         add.Show();
+                        this.Hide();
                         break;
                     }
                 }
