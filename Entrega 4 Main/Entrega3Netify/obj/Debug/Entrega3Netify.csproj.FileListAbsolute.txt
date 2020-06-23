@@ -1,0 +1,361 @@
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\Manuel\NetifyWF\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega3Ok\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF-master\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\mabar\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+D:\Documentos\GitHub\Proyecto-Grupo3\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ExtrasForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Snake.Form1.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ExtrasForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Snake.Form1.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\Manuel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ExtrasForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Snake.Form1.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\Miguel\Source\Repos\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AlarmForm.resources
+C:\Users\nicoj\Desktop\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AlarmForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AlarmForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ExtrasForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Snake.Form1.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageMenu.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ImageViewer.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
+C:\Users\Miguel\NetifyWF\Entrega 3 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AdminForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x86\libcrypto-1_1.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x86\libcurl.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x86\libssl-1_1.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x86\MediaInfo.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x64\libcrypto-1_1-x64.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x64\libcurl.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x64\libssl-1_1-x64.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\x64\MediaInfo.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe.config
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\Entrega3Netify.pdb
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\NAudio.dll
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\MediaInfo.Wrapper.xml
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\bin\Debug\NAudio.xml
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csprojAssemblyReference.cache
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AddVideoToForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AdminForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.AlarmForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ChangeUserDataForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.ExtrasForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowActors.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowSingers.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.FollowUsers.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Snake.Form1.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.LoginChallenge.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainLoginForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.MainMenu.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.Properties.Resources.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.RegisterForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.SongMenuForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.VideoMenuForm.resources
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.GenerateResource.cache
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CoreCompileInputs.cache
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.csproj.CopyComplete
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.exe
+C:\Users\nicoj\Desktop\Entrega 4 Main\Entrega3Netify\obj\Debug\Entrega3Netify.pdb
