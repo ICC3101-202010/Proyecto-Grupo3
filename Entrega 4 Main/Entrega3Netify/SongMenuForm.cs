@@ -635,8 +635,10 @@ namespace Entrega3Netify
                 }
                 DeletePlaylistComboBox.Items.Clear();
                 Gestor.SaveFavoriteUser(Users, CurrentUser);
-                stackpanels.RemoveAt(stackpanels.Count - 1);
-                ShowLastPanel();
+                this.Close();
+                SongMenuForm songMenu = new SongMenuForm(Users, CurrentUser, mainlog);
+                SongsController songscontroller = new SongsController(songMenu);
+                songMenu.Show();
             }
         }
 
@@ -679,43 +681,50 @@ namespace Entrega3Netify
 
         private void SelectButton_Click(object sender, EventArgs e)
         {
-            SRComboBox.Items.Clear();
-            stackpanels.Add(panels["FinalRemovePanel"]);
-            ShowLastPanel();
-            if (RPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
+            if(RPlaylistComboBox.SelectedItem!=null)
             {
-                if (CurrentUser.FavoriteSongs != null)
+                SRComboBox.Items.Clear();
+                stackpanels.Add(panels["FinalRemovePanel"]);
+                ShowLastPanel();
+                if (RPlaylistComboBox.SelectedItem.ToString() == "Favoritos")
                 {
-                    foreach (Song s in CurrentUser.FavoriteSongs)
+                    if (CurrentUser.FavoriteSongs != null)
                     {
-                        SRComboBox.Items.Add(s);
+                        foreach (Song s in CurrentUser.FavoriteSongs)
+                        {
+                            SRComboBox.Items.Add(s.Name);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (SongPlaylist pl in CurrentUser.CancionesPrivadas)
+                    {
+                        if (pl.Name == RPlaylistComboBox.SelectedItem.ToString())
+                        {
+                            foreach (Song s in pl.ActualPlaylist)
+                            {
+                                SRComboBox.Items.Add(s.Name);
+                            }
+                            break;
+                        }
+                    }
+                    foreach (SongPlaylist pl in CurrentUser.CancionesPublicas)
+                    {
+                        if (pl.Name == RPlaylistComboBox.SelectedItem.ToString())
+                        {
+                            foreach (Song s in pl.ActualPlaylist)
+                            {
+                                SRComboBox.Items.Add(s.Name);
+                            }
+                            break;
+                        }
                     }
                 }
             }
-            else 
+            else
             {
-                foreach (SongPlaylist pl in CurrentUser.CancionesPrivadas)
-                {
-                    if (pl.Name == RPlaylistComboBox.SelectedItem.ToString()) 
-                    {
-                        foreach(Song s in pl.ActualPlaylist)
-                        {
-                            SRComboBox.Items.Add(s.Name);
-                        }
-                        break;
-                    }
-                }
-                foreach (SongPlaylist pl in CurrentUser.CancionesPublicas)
-                {
-                    if (pl.Name == RPlaylistComboBox.SelectedItem.ToString())
-                    {
-                        foreach (Song s in pl.ActualPlaylist)
-                        {
-                            SRComboBox.Items.Add(s.Name);
-                        }
-                        break;
-                    }
-                }
+                MessageBox.Show("Porfavor seleccione una playlist");
             }
         }
 
@@ -777,6 +786,7 @@ namespace Entrega3Netify
                     }
                 }
             }
+            RPlaylistComboBox.Items.Clear();
             stackpanels.RemoveAt(stackpanels.Count - 1);
             stackpanels.RemoveAt(stackpanels.Count - 1);
             ShowLastPanel();
@@ -880,12 +890,19 @@ namespace Entrega3Netify
 
         private void ASSelectButton_Click(object sender, EventArgs e)
         {
-            SRComboBox.Items.Clear();
-            stackpanels.Add(panels["FinalAddSongPanel"]);
-            ShowLastPanel();
-            foreach (Song s in def)
+            if (ASPlaylistComboBox.SelectedItem != null)
             {
-                ASSComboBox.Items.Add(s.Name);
+                stackpanels.Add(panels["FinalAddSongPanel"]);
+                ShowLastPanel();
+                ASSComboBox.Items.Clear();
+                foreach (Song s in def)
+                {
+                    ASSComboBox.Items.Add(s.Name);
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Porfavor seleccione una playlist.");
             }
         }
 

@@ -23,7 +23,6 @@ namespace Entrega3Netify
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            ListViewGroup usuarios = new ListViewGroup("Usuarios",HorizontalAlignment.Left);
             UsersListView.View = View.Details;
             UsersListView.Columns.Add("ID");
             UsersListView.Columns.Add("Nombre");
@@ -34,8 +33,8 @@ namespace Entrega3Netify
             UsersListView.Columns.Add("Premium/Normal");
             foreach (NPerson person in users)
             {
-                UsersListView.Items.Add(new ListViewItem(new[] {person.IDUser.ToString(),person.Name,person.LastName,person.Email,person.Password,person.Private.ToString(),person.Premium.ToString() },usuarios));
-            };
+                UsersListView.Items.Add(new ListViewItem(new[] {person.IDUser.ToString(),person.Name,person.LastName,person.Email,person.Password,person.Private.ToString(),person.Premium.ToString() }));
+            }
 
         }
 

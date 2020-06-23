@@ -22,7 +22,7 @@ namespace Entrega3Netify
             InitializeComponent();
             for (int i = 0; i < 60; i++) 
             {
-                if ((i >= 10) && (i <= 24))
+                if ((i >= 10) && (i < 24))
                 {
                     HourComboBox.Items.Add(i.ToString());
                     MinuteComboBox.Items.Add(i.ToString());

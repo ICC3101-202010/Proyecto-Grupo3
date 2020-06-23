@@ -72,12 +72,8 @@ namespace Entrega3Netify
             try
             {
 
-                String index = followSingersView.SelectedItems[0].Text;
+                string index = followSingersView.SelectedItems[0].Text;
                 followSingersView.SelectedItems[0].SubItems[3].Text = "Seguido";
-
-                //Debug.WriteLine("Seguidos:");
-                //Debug.WriteLine(index);
-
                 int followedIndex = Convert.ToInt32(index);
                 mainMatrix.seguirCantante(currentUser.IDUser, followedIndex);
             }
@@ -90,9 +86,6 @@ namespace Entrega3Netify
         private void unfollowButton_Click(object sender, EventArgs e)
         {
             String index = followSingersView.SelectedItems[0].Text;
-            //Debug.WriteLine("Seguidos:");
-            //Debug.WriteLine(index);
-
             followSingersView.SelectedItems[0].SubItems[3].Text = "No Seguido";
             int followedIndex = Convert.ToInt32(index);
             mainMatrix.dejardeSeguirCantante(currentUser.IDUser, followedIndex);
